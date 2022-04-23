@@ -12,6 +12,11 @@ Test
 1. gradle clean test
 2. mvn clean test
 
+Run
+---
+1. gradle run
+2. mvn run
+
 Learn Java
 ----------
 >Random thoughts on how to learn Java - from a guy who used Java for 16 years.

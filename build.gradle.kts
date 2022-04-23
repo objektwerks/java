@@ -1,10 +1,15 @@
 plugins {
     id("java")
     id("com.adarshr.test-logger") version "3.2.0"
+    application
 }
 
 group = "objektwerks"
 version = "1.0-SNAPSHOT"
+
+application {
+    mainClass.set("objektwerks.Main")
+}
 
 repositories {
     mavenCentral()
