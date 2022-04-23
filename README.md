@@ -24,6 +24,16 @@ Run
 1. gradle run
 2. mvn exec:java
 
+Package
+-------
+>Package and assemble, via maven-assembly-plugin, an executable jar:
+1. mvn package
+
+Execute
+-------
+>Run executable jar:
+1. java -jar target/java-1.0-SNAPSHOT-jar-with-dependencies.jar
+
 Learn Java
 ----------
 >Random thoughts on how to learn Java - from a guy who used Java for 16 years.
