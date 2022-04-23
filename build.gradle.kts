@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "objektwerks"
+group = "java"
 version = "1.0-SNAPSHOT"
 
 repositories {
