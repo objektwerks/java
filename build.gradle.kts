@@ -11,6 +11,10 @@ application {
     mainClass.set("objektwerks.App")
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
 repositories {
     mavenCentral()
 }
