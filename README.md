@@ -65,4 +65,5 @@ Learn Java
 
 Resources
 ---------
-1. [Jenkov Java Tutorials](https://jenkov.com/tutorials/java/index.html)
+1. [Oracle Java Tutorials](https://docs.oracle.com/javase/tutorial/)
+2. [Jenkov Java Tutorials](https://jenkov.com/tutorials/java/index.html)
