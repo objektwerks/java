@@ -8,5 +8,4 @@ class BasicTest {
     @Test void test() {
         assertEquals(1 + 1, 2);
     }
-
 }
