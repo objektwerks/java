@@ -62,3 +62,7 @@ Learn Java
 2. [Netbeans](https://netbeans.apache.org/)
 
 >***Always keep it simple!*** ***And never forget Murphy's law!***
+
+Resources
+---------
+1. [Jenkov Java Tutorials](https://jenkov.com/tutorials/java/index.html)
