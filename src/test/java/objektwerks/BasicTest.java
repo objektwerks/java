@@ -8,9 +8,11 @@ import org.slf4j.LoggerFactory;
 
 class BasicTest {
     private static final Logger logger = (Logger) LoggerFactory.getLogger(BasicTest.class);
-    
-    @Test void basic() {
+    static {
         logger.info("*** Test logging is working!");
+    }
+
+    @Test void basic() {
         assertEquals(1 + 1, 2);
     }
 }
