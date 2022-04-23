@@ -11,6 +11,6 @@ public class App {
         String prefix = "*** ";
         System.out.println(prefix + "Hello world!");
         System.out.println(prefix + "Hello, " + name + "!");
-        logger.info(prefix + "Logging is working!");
+        logger.info(prefix + "App lgging is working!");
     }
 }
