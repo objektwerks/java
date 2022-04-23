@@ -1,6 +1,6 @@
 Java
 ----
->Java feature tests.
+>Java feature tests using both Gradle and Maven build tools.
 
 Build
 -----
