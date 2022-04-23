@@ -5,7 +5,7 @@ Java
 Build
 -----
 1. gradle clean build
-2. mvn clean compile
+2. mvn clean install
 
 Test
 ----
