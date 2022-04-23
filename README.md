@@ -2,6 +2,11 @@ Java
 ----
 >Java feature tests using both Gradle and Maven build tools.
 
+Error
+-----
+>In VS Code, the **Extension Pack for Java** has a but that emits this error message:
+* Project 'java' has no explicit encoding set
+
 Build
 -----
 1. gradle clean build
