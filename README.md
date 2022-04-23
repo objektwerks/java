@@ -40,6 +40,7 @@ Learn Java
 
 >I recommend using both VS Code and Intellij, given their popularity in the Java space. Eventually you'll develop a
 >preference for one, but know both.
+
 >The following IDEs are also used in the Java community:
 1. [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
 2. [Netbeans](https://netbeans.apache.org/)
