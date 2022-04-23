@@ -71,6 +71,17 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M6</version>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>objektwerks.Main</mainClass>
+                    <arguments>
+                        <argument>Java geek</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
