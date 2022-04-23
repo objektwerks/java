@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
 class BasicTest {
-    private Logger logger = (Logger) LoggerFactory.getLogger(BasicTest.class);
+    private static final Logger logger = (Logger) LoggerFactory.getLogger(BasicTest.class);
     
     @Test void basic() {
         logger.info("*** Test logging is working!");
