@@ -2,6 +2,16 @@ Java
 ----
 >Java feature tests.
 
+Build
+-----
+1. gradle clean build
+2. mvn clean compile
+
+Test
+----
+1. gradle clean test
+2. mvn clean test
+
 Learn Java
 ----------
 >Random thoughts on how to learn Java - from a guy who used Java for 16 years.
