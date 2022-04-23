@@ -8,7 +8,7 @@ group = "objektwerks"
 version = "1.0-SNAPSHOT"
 
 application {
-    mainClass.set("objektwerks.Main")
+    mainClass.set("objektwerks.App")
 }
 
 repositories {
