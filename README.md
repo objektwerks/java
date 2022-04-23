@@ -15,7 +15,7 @@ Test
 Learn Java
 ----------
 >Random thoughts on how to learn Java - from a guy who used Java for 16 years.
-1. Create a free [Github Account]( github.com ).
+1. Create a free [Github Account]( https://github.com ).
 2. Learn [Git Basics]( https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ ).
 3. Download and install:
    1. [Java JDK 17]( https://www.oracle.com/java/technologies/downloads/#java17 ).
