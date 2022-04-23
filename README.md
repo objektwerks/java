@@ -9,6 +9,12 @@ Bug
 * See: https://github.com/redhat-developer/vscode-java/issues/2416
 >The next release, likely 1.6.0, will include a fix. Ignore for now.
 
+Install
+-------
+>On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
+1. [Maven](https://maven.apache.org/)
+2. [Gradle](https://gradle.org/)
+
 Build
 -----
 1. gradle clean build
