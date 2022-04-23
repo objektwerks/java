@@ -9,7 +9,7 @@ class BasicTest {
     private Logger logger = LoggerFactory.getLogger(BasicTest.class);
     
     @Test void basic() {
-        logger.info("*** BasicTest::basic: Logging is working!");
+        logger.info("*** Test logging is working!");
         assertEquals(1 + 1, 2);
     }
 }
