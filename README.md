@@ -15,7 +15,7 @@ Test
 Run
 ---
 1. gradle run
-2. mvn run
+2. mvn exec:java
 
 Learn Java
 ----------
