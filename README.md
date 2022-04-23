@@ -2,10 +2,12 @@ Java
 ----
 >Java feature tests using both Gradle and Maven build tools.
 
-Error
------
->In VS Code, the **Extension Pack for Java** has a but that emits this error message:
+Bug
+---
+>In VS Code, the Red Hat **Language Support for Java** extension contains a bug that emits this error message:
 * Project 'java' has no explicit encoding set
+* See: https://github.com/redhat-developer/vscode-java/issues/2416
+>The next release, likely 1.6.0, will include a fix.
 
 Build
 -----
