@@ -83,4 +83,13 @@ class VariableTest {
       assert(x / y == 2);
       assert(x % 2 == 0 && y % 2 == 0); 
   }
+
+  @Test void compoundAssignmentTest() {
+      int x = 5;
+      assert(8 == (x += 3));
+      assert(4 == (x -= 4));
+      assert(24 == (x *= 6));
+      assert(12 == (x /= 2));
+      assert(5 == (x %= 7));
+  }
 }
