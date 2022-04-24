@@ -11,12 +11,12 @@ class VariableTest {
   }
 
   @Test void charTest() {
-    char x = 'x';
-    char y = 'y';
-    char z = 'z';
-    assert(x == new String("x").charAt(0));
-    assert(y == new String("y").charAt(0));
-    assert(z == new String("z").charAt(0));
+    char number = '1';
+    char letter = 'a';
+    assert(Character.isDigit(number));
+    assert(Character.isLetter(letter));
+    assert(number != letter);
+    assert(letter == new String("a").charAt(0));
   }
 
   @Test void stringTest() {
