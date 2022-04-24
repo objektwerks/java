@@ -27,6 +27,16 @@ class VariableTest {
     assert(barney.length() == 12);
   }
 
+  @Test void byteTest() {
+    byte low = 1;
+    byte high = 127;
+    assert(low > 0 && high < 128);
+  }
+
+  @Test void shortTest() {
+
+  }
+
   @Test void intTest() {
     int positive = 10;
     int negative = -5;
@@ -34,6 +44,10 @@ class VariableTest {
     assert(positive > 0 && positive == 10);
     assert(negative < 0 && negative == -5);
     assert(zero == 0);
+  }
+
+  @Test void longTest() {
+
   }
 
   @Test void doubleTest() {
