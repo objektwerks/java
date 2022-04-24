@@ -102,4 +102,12 @@ class VariableTest {
       assert(12 == (x /= 2));
       assert(5 == (x %= 7));
   }
+
+  @Test void incrementDecrementTest() {
+    int x = 1;
+    x++;
+    assert(x == 2);
+    x--;
+    assert(x == 1);
+  }
 }
