@@ -34,7 +34,9 @@ class VariableTest {
   }
 
   @Test void shortTest() {
-
+    short low = 1;
+    short high = 32767;
+    assert(low > 0 && high < 32768);
   }
 
   @Test void intTest() {
