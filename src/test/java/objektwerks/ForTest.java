@@ -19,6 +19,15 @@ class ForTest {
         assert(Arrays.equals(xs, ys)); // structural equality
     }
 
+    @Test void forTest() {
+        int[] xs = {1, 2, 3};
+        int sum = 0;
+        for(int i = 0; i < xs.length; i++) {
+          sum += xs[i];
+        }
+        assert(sum == 6);
+    }
+
     @Test void forEachTest() {
         int[] xs = {1, 2, 3};
         int sum = 0;
