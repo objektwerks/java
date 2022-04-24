@@ -1,7 +1,6 @@
 package objektwerks;
 
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +12,6 @@ class BasicTest {
     }
 
     @Test void basic() {
-        assertEquals(1 + 1, 2);
+        assert(1 + 1 >= (4 / 2));
     }
 }
