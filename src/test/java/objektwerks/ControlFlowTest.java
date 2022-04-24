@@ -3,6 +3,13 @@ package objektwerks;
 import org.junit.jupiter.api.Test;
 
 class ControlFlowTest {
+    @Test void ifTest() {
+        int x = 1;
+        boolean result = false;
+        if (x >= 1) result = true;
+        assert(result);
+    }
+
     @Test void ifElseTest() {
         int x = 1;
         boolean result;
