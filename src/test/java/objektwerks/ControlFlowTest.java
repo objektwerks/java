@@ -36,5 +36,20 @@ class ControlFlowTest {
           grade = 'F';
         }
         assert(grade == 'C');
-  }
+    }
+
+    @Test void nestedIfElseTest() {
+        boolean wellRested = true;
+        boolean wellPrepared = true;
+        String greeting = "";
+        if (wellRested) {
+          greeting = "Best of luck today!";  
+          if (wellPrepared) {
+            greeting = "You are ready for your exam!";
+          } else {
+            greeting = "Study before your exam!";
+          }
+        }
+        assert(greeting == "You are ready for your exam!");
+    }
 }
