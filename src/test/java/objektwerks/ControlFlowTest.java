@@ -2,7 +2,7 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
-public class ControlFlowTest {
+class ControlFlowTest {
     @Test void ifElseTest() {
         int x = 1;
         boolean result;
