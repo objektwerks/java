@@ -75,12 +75,12 @@ class VariableTest {
   }
 
   @Test void mathTest() {
-      int a = 20;
-      int b = 10;
-      assert(a + b == 30);  // 30
-      assert(a - b == 10);  // 10
-      assert(a * b == 200);  // 200
-      assert(a / b == 2);  // 2
-      assert(a % 2 == 0 && b % 2 == 0); 
+      int x = 20;
+      int y = 10;
+      assert(x + y == 30);
+      assert(x - y == 10);
+      assert(x * y == 200);
+      assert(x / y == 2);
+      assert(x % 2 == 0 && y % 2 == 0); 
   }
 }
