@@ -10,6 +10,15 @@ class VariableTest {
       assert(!isSqaure);
   }
 
+  @Test void charTest() {
+    char x = 'x';
+    char y = 'y';
+    char z = 'z';
+    assert(x == new String("x").charAt(0));
+    assert(y == new String("y").charAt(0));
+    assert(z == new String("z").charAt(0));
+  }
+
   @Test void stringTest() {
     String fred = "Fred Flinstone";
     String barney = "Barney Rebel";
