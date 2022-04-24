@@ -19,8 +19,8 @@ class VariableTest {
   }
 
   @Test void integer() {
-    int positive = 10;   // positive value
-    int negative = -5;   // negative value
+    int positive = 10;
+    int negative = -5;
     int zero = 0; 
     assert(positive > 0 && positive == 10);
     assert(negative < 0 && negative == -5);
