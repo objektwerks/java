@@ -49,7 +49,9 @@ class VariableTest {
   }
 
   @Test void longTest() {
-
+    long low = Long.MIN_VALUE;
+    long high = Long.MAX_VALUE;
+    assert(low >= Long.MIN_VALUE && high <= Long.MAX_VALUE);
   }
 
   @Test void doubleTest() {
