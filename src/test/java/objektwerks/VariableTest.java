@@ -9,4 +9,12 @@ class VariableTest {
       assert(isRound);
       assert(!isSqaure);
   }
+
+  @Test void string() {
+    String fred = "Fred Flinstone";
+    String barney = "Barney Rebel";
+    assert(fred != barney);
+    assert(fred.length() == 14);
+    assert(barney.length() == 12);
+  }
 }
