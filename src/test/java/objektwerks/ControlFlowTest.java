@@ -52,4 +52,11 @@ class ControlFlowTest {
         }
         assert(greeting == "You are ready for your exam!");
     }
+
+    @Test void andNotOrTest() {
+      int x = 1;
+      assert(x > 0 && x < 2);
+      assert(x != 0);
+      assert(x > 0 || x < 2);
+    }
 }
