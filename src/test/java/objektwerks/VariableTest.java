@@ -54,6 +54,12 @@ class VariableTest {
     assert(low >= Long.MIN_VALUE && high <= Long.MAX_VALUE);
   }
 
+  @Test void floatTest() {
+    float low = Float.MIN_VALUE;
+    float high = Float.MAX_VALUE;
+    assert(low >= Float.MIN_VALUE && high <= Float.MAX_VALUE);
+  }
+
   @Test void doubleTest() {
     double positive = 10.5;
     double negative = -5.5;
@@ -61,5 +67,10 @@ class VariableTest {
     assert(positive > 0.0 && positive == 10.5);
     assert(negative < 0.0 && negative == -5.5);
     assert(zero == 0.0);
+  }
+
+  @Test void finalTest() {
+    final double immutablePI = 3.14;
+    assert(immutablePI > 3.13);
   }
 }
