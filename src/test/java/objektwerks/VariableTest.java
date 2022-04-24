@@ -84,6 +84,16 @@ class VariableTest {
       assert(x % 2 == 0 && y % 2 == 0); 
   }
 
+  @Test void comparisonTest() {
+      int x = 1;
+      int y = 2;
+      assert(y > x);
+      assert(x < y);
+      assert(y >= x && x <= y);
+      assert(x == 1 && y == 2);
+      assert(x != y);
+  }
+
   @Test void compoundAssignmentTest() {
       int x = 5;
       assert(8 == (x += 3));
