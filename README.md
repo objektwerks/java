@@ -20,7 +20,7 @@ Preview Features
 1. pom.xml / maven-compiler-plugin
 2. build.gradle.kts tasks {}
 >javac:
-* --release 17 --enable-preview
+* javac --release 17 --enable-preview
 >java:
 * java --release 17 --enable-preview
 
