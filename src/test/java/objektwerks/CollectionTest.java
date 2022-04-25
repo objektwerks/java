@@ -23,6 +23,14 @@ class CollectionTest {
 
         EnumSet<Level> enumSet = EnumSet.of(Level.high, Level.low);
         assert(enumSet.size() == 2);
+
+        EnumMap<Level, Integer> enumMap = new EnumMap<Level, Integer>(Level.class);
+        enumMap.put(Level.high, 1);
+        enumMap.put(Level.medium, 2);
+        enumMap.put(Level.low, 3);
+        assert(enumMap.get(Level.high) == 1);
+        assert(enumMap.get(Level.medium) == 2);
+        assert(enumMap.get(Level.low) == 3);
     }
 
     @Test void arrayTest() {
