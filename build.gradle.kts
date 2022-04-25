@@ -11,7 +11,7 @@ application {
     mainClass.set("objektwerks.App")
 }
 
-tasks.withType<Test> {
+tasks.withType<Test>() {
     useJUnitPlatform()
 }
 
