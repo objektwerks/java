@@ -20,9 +20,9 @@ Preview Features
 1. pom.xml / maven-compiler-plugin
 2. build.gradle.kts tasks {}
 >javac:
-* --release 17 --enable-preview objektwerks.PatternMatchTest.java
+* --release 17 --enable-preview
 >java:
-* java --enable-preview  objektwerks.PatternMatchTest.java
+* java --enable-preview
 
 Install
 -------
