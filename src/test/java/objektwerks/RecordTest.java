@@ -10,4 +10,12 @@ class RecordTest {
         assert(rectangle.width() == 2.0);
         assert(rectangle.height() == 2.0);
     }
+
+    @Test void equalsTest() {
+      Rectangle rectangleA = new Rectangle(1.0, 1.0);
+      Rectangle rectangleB = new Rectangle(2.0, 2.0);
+      Rectangle rectangleC = new Rectangle(2.0, 2.0);
+      assert(!rectangleA.equals(rectangleB));
+      assert(rectangleB.equals(rectangleC));
+    }
 }
