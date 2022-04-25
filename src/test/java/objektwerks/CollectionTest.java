@@ -16,6 +16,9 @@ class CollectionTest {
         assert(high.toString() == "high");
         assert(Level.valueOf("high") == high);
         assert(Level.values().length == 3);
+        for (Level level : Level.values()) {
+            assert(level.name() != "");
+        }
     }
 
     @Test void arrayTest() {
