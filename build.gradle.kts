@@ -11,8 +11,20 @@ application {
     mainClass.set("objektwerks.App")
 }
 
-tasks.withType<Test>() {
-    useJUnitPlatform()
+
+tasks {
+    val enablePreview = "--enable-preview"
+    withType<JavaCompile>() {
+        options.compilerArgs.add(enablePreview)
+        options.release.set(17)
+    }
+    withType<Test>() {
+        useJUnitPlatform()
+        jvmArgs?.add(enablePreview)
+    }
+    withType<JavaExec>() {
+        jvmArgs?.add(enablePreview)
+    }
 }
 
 repositories {
