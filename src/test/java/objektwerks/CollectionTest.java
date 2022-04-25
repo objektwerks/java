@@ -16,9 +16,13 @@ class CollectionTest {
         assert(high.toString() == "high");
         assert(Level.valueOf("high") == high);
         assert(Level.values().length == 3);
+
         for (Level level : Level.values()) {
             assert(level.name() != "");
         }
+
+        EnumSet<Level> enumSet = EnumSet.of(Level.high, Level.low);
+        assert(enumSet.size() == 2);
     }
 
     @Test void arrayTest() {
