@@ -6,8 +6,6 @@ import java.time.format.DateTimeFormatter;
 import org.junit.jupiter.api.Test;
 
 class DateTimeTest {
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-
     @Test void dateTimeTest() {
         LocalDateTime datetime = LocalDateTime.now();
         assert(LocalDateTime.parse(datetime.toString()).equals(datetime));
@@ -26,5 +24,17 @@ class DateTimeTest {
     @Test void timeTest() {
         LocalTime time = LocalTime.now();
         assert(LocalTime.parse(time.toString()).equals(time));
+    }
+
+    @Test void formatTest() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        LocalDateTime datetime = LocalDateTime.now();
+        String datetimeAsString = formatter.format(datetime);
+        LocalDateTime parsedDatetime = LocalDateTime.parse(datetimeAsString, formatter);
+        assert(datetime.getYear() == parsedDatetime.getYear());
+        assert(datetime.getMonthValue() == parsedDatetime.getMonthValue());
+        assert(datetime.getDayOfMonth() == parsedDatetime.getDayOfMonth());
+        assert(datetime.getHour() == parsedDatetime.getHour());
+        assert(datetime.getMinute() <= parsedDatetime.getMinute());
     }
 }
