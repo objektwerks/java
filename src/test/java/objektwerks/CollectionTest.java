@@ -19,15 +19,6 @@ class CollectionTest {
         for (Level level : Level.values()) {
             assert(level.name() != "");
         }
-
-        EnumMap<Level, Integer> enumMap = new EnumMap<Level, Integer>(Level.class);
-        enumMap.put(Level.high, 1);
-        enumMap.put(Level.medium, 2);
-        enumMap.put(Level.low, 3);
-        assert(enumMap.size() == 3);
-        assert(enumMap.get(Level.high) == 1);
-        assert(enumMap.get(Level.medium) == 2);
-        assert(enumMap.get(Level.low) == 3);
     }
 
     @Test void enumSetTest() {
@@ -36,6 +27,17 @@ class CollectionTest {
         assert(enumSet.contains(Level.high));
         assert(enumSet.contains(Level.medium));
         assert(enumSet.contains(Level.low));
+    }
+
+    @Test void enumMapTest() {
+        EnumMap<Level, Integer> enumMap = new EnumMap<Level, Integer>(Level.class);
+        enumMap.put(Level.high, 1);
+        enumMap.put(Level.medium, 2);
+        enumMap.put(Level.low, 3);
+        assert(enumMap.size() == 3);
+        assert(enumMap.get(Level.high) == 1);
+        assert(enumMap.get(Level.medium) == 2);
+        assert(enumMap.get(Level.low) == 3);
     }
 
     @Test void arrayTest() {
