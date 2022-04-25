@@ -32,7 +32,7 @@ Install
 
 VS Code Settings
 ----------------
->Via menu: File > Preferences > Settings: java.jdt.ls.java.home > Edit in settings.json:
+>Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
 ```
    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home",
    "java.jdt.ls.vmargs": "--release 17 --enable-preview",
