@@ -12,13 +12,21 @@ class Person {
     }
 }
 
-abstract class Canine {
+interface Behavior {
+    String behavior();
+}
+
+abstract class Canine implements Behavior {
     abstract String bark();
+    public abstract String behavior();
 }
  
 class Dog extends Canine {
     String bark() {
-      return "ruf ruf";
+        return "ruf ruf";
+    }
+    public String behavior() {
+        return "friendly";
     }
 }
 
@@ -30,7 +38,12 @@ class ClassTest {
     }
 
     @Test void inheritenceTest() {
-      Dog dog = new Dog();
-      assert(dog.bark() == "ruf ruf");
+        Dog dog = new Dog();
+        assert(dog.bark() == "ruf ruf");
+    }
+
+    @Test void interfaceTest() {
+        Dog dog = new Dog();
+        assert(dog.behavior() == "friendly");
     }
 }
