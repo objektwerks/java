@@ -20,11 +20,13 @@ class VariableTest {
   }
 
   @Test void stringTest() {
-      String fred = "Fred Flinstone";
+      String fred = "Fred Flintstone";
       String barney = "Barney Rebel";
       assert(fred != barney);
-      assert(fred.length() == 14);
+      assert(fred.length() == 15);
       assert(barney.length() == 12);
+      assert(fred.toUpperCase().equals("FRED FLINTSTONE"));
+      assert(fred.concat(barney).equals(fred + barney));
   }
 
   @Test void byteTest() {
