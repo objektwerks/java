@@ -23,10 +23,17 @@ class VariableTest {
       String fred = "Fred Flintstone";
       String barney = "Barney Rebel";
       assert(fred != barney);
+      assert(fred.concat(barney).equals(fred + barney));
+
       assert(fred.length() == 15);
       assert(barney.length() == 12);
+
+      assert(barney.toLowerCase().equals("barney rebel"));
       assert(fred.toUpperCase().equals("FRED FLINTSTONE"));
-      assert(fred.concat(barney).equals(fred + barney));
+
+      assert(fred.indexOf("stone") == 10);
+      assert(fred.startsWith("Fred"));
+      assert(barney.endsWith("Rebel"));
   }
 
   @Test void byteTest() {
