@@ -11,7 +11,7 @@ class PatternMatchingTest {
     String matchNumber(Object number) {
         return switch (number) {
             case Integer i -> i.toString();
-            case Double d  -> d.toString();
+            case Double  d -> d.toString();
             default        -> fail("match on number failed!");
         };
     }
