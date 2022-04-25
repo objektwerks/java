@@ -1,10 +1,6 @@
 package objektwerks;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +36,16 @@ class CollectionTest {
     @Test void setTest() {
         Set<Integer> set = Set.of(1, 2, 3);
         assert(set.size() == 3);
+    }
+
+    @Test void sortedSetTest() {
+        SortedSet<Integer> set = new TreeSet<Integer>();
+        set.add(3);
+        set.add(2);
+        set.add(1);
+        assert(set.size() == 3);
+        assert(set.first() == 1);
+        assert(set.last() == 3);
     }
 
     @Test void mapTest() {
