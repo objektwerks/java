@@ -3,6 +3,7 @@ package objektwerks;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +32,12 @@ class CollectionTest {
     }
 
     @Test void listTest() {
-        List<Integer> xs = Arrays.asList(1, 2, 3);
-        assert(xs.size() == 3);
+        List<Integer> list = Arrays.asList(1, 2, 3);
+        assert(list.size() == 3);
+    }
+
+    @Test void setTest() {
+        Set<Integer> set = Set.of(1, 2, 3);
+        assert(set.size() == 3);
     }
 }
