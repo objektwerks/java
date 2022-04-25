@@ -44,7 +44,7 @@ VS Code Settings
       },    
    ],
 ```
->The above settings, ensure JDK 17 is used with preview features enabled!
+>These settings ensure JDK 17 is used with preview features **enabled**!
 
 Build
 -----
