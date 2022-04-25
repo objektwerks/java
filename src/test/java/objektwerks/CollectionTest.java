@@ -63,10 +63,19 @@ class CollectionTest {
         assert(ys.size() == 3);
     }
 
-    @Test void listTest() {
-        List<Integer> list = Arrays.asList(1, 2, 3);
-        assert(list.size() == 3);
-        assert(list.get(0) == 1);
+    @Test void immutableListTest() {
+        List<Integer> immutableList = List.of(1, 2, 3);
+        assert(immutableList.size() == 3);
+        assert(immutableList.get(0) == 1);
+    }
+
+    @Test void mutableListTest() {
+        List<Integer> mutableList = new ArrayList<Integer>();
+        mutableList.add(1);
+        mutableList.add(2);
+        mutableList.add(3);
+        assert(mutableList.add(4));
+        assert(mutableList.remove(3) == 4);
     }
 
     @Test void setTest() {
