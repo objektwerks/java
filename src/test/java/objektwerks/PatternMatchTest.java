@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 /**
- * This feature test works with Maven and fails with Gradle. Fix unknown at this time.
+ * This feature test passes with Maven but fails with Gradle. Fix unknown at this time.
  */
-class PatternMatchingTest {
+class PatternMatchTest {
     String matchNumber(Object number) {
         return switch (number) {
             case Integer i -> i.toString();
