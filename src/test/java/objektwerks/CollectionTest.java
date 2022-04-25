@@ -66,6 +66,7 @@ class CollectionTest {
     @Test void listTest() {
         List<Integer> list = Arrays.asList(1, 2, 3);
         assert(list.size() == 3);
+        assert(list.get(0) == 1);
     }
 
     @Test void setTest() {
