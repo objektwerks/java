@@ -9,7 +9,6 @@ sealed interface Shape permits Circle, Square {
     return switch (this) {
         case Circle c -> pi * Math.pow(c.diameter() / 2, 2);
         case Square s -> Math.pow(s.side(), 2);
-        default          -> 0.0;
     };
 }
 }
