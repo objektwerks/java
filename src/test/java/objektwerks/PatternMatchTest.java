@@ -1,7 +1,6 @@
 package objektwerks;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -9,16 +8,18 @@ import org.junit.jupiter.api.Test;
  * Intellij understands this code but VS Code does not.
  */
 class PatternMatchTest {
-    String matchNumber(Object number) {
+    String mathOn(Number number) {
         return switch (number) {
             case Integer i -> i.toString();
+            case Long    l -> l.toString();
             case Double  d -> d.toString();
-            default        -> fail("match on number failed!");
+            case Float   f -> f.toString();
+            default        -> "";
         };
     }
 
     @Test void matchTest() {
-        assertEquals(matchNumber(1), "1");
-        assertEquals(matchNumber(2.0), "2.0");
+        assertEquals(mathOn(1), "1");
+        assertEquals(mathOn(2.0), "2.0");
     }
 }
