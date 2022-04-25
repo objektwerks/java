@@ -16,13 +16,14 @@ class VariableTest {
       assert(Character.isDigit(number));
       assert(Character.isLetter(letter));
       assert(number != letter);
-      assert(letter == new String("a").charAt(0));
+      assert(letter == "a".charAt(0));
   }
 
   @Test void stringTest() {
       String fred = "Fred Flintstone";
       String barney = "Barney Rebel";
       assert(fred != barney);
+      assert(!fred.equals(barney));
       assert(fred.concat(barney).equals(fred + barney));
 
       assert(fred.length() == 15);
