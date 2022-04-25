@@ -22,7 +22,7 @@ Preview Features
 >javac:
 * --release 17 --enable-preview
 >java:
-* java --enable-preview
+* java --release 17 --enable-preview
 
 Install
 -------
