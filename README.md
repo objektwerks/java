@@ -11,8 +11,8 @@ Bug 1
 
 Bug 2
 -----
->Enabling JDK 17 preview features works with Maven but fails with Gradle.
->Intellij understands preview features, but fails to run preview feature tests.
+>Enabling JDK 17 preview features **passes** with Maven but **fails** with Gradle.
+>Intellij **understands** preview features, but **fails** to run preview feature tests.
 1. See pom.xml / maven-compiler-plugin for details.
 2. See build.gradle.kts for details.
 >javac:
