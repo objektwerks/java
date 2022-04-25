@@ -2,6 +2,7 @@ package objektwerks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,5 +28,10 @@ class CollectionTest {
           list.add(x);
         }
         assert(list.size() == 3);
+    }
+
+    @Test void listTest() {
+        List<Integer> xs = Arrays.asList(1, 2, 3);
+        assert(xs.size() == 3);
     }
 }
