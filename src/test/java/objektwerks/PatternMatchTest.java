@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * This test passes with Maven but fails with Gradle. Fix unknown at this time.
+ * Intellij understands this code but VS Code does not.
  */
 class PatternMatchTest {
     String matchNumber(Object number) {
@@ -17,8 +18,6 @@ class PatternMatchTest {
     }
 
     @Test void matchTest() {
-        System.out.println("*** " + matchNumber(1));
-        System.out.println("*** " + matchNumber(2.0));
         assertEquals(matchNumber(1), "1");
         assertEquals(matchNumber(2.0), "2.0");
     }
