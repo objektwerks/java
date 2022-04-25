@@ -52,4 +52,14 @@ class CollectionTest {
         Map<Integer, Integer> map = Map.of(1, 1, 2, 2, 3, 3);
         assert(map.size() == 3 );
     }
+
+    @Test void sortedMapTest() {
+        SortedMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+        map.put(1, 1);
+        map.put(2, 2);
+        map. put(3, 3);
+        assert(map.size() == 3);
+        assert(map.firstKey() == 1);
+        assert(map.lastKey() == 3);
+    }
 }
