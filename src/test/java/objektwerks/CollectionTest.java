@@ -89,6 +89,9 @@ class CollectionTest {
     @Test void mapTest() {
         Map<Integer, Integer> map = Map.of(1, 1, 2, 2, 3, 3);
         assert(map.size() == 3 );
+        assert(map.get(1) == 1);
+        assert(map.get(2) == 2);
+        assert(map.get(3) == 3);
     }
 
     @Test void sortedMapTest() {
