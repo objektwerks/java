@@ -4,7 +4,20 @@ import java.util.*;
 
 import org.junit.jupiter.api.Test;
 
+enum Level {
+    high,
+    medium,
+    low
+}
+
 class CollectionTest {
+    @Test void enumTest() {
+        Level high = Level.high;
+        assert(high.toString() == "high");
+        assert(Level.valueOf("high") == high);
+        assert(Level.values().length == 3);
+    }
+
     @Test void arrayTest() {
         int[] xs = {1, 2, 3};
         assert(xs.length == 3);
