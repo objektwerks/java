@@ -15,7 +15,7 @@ Preview Features
 1. Maven **does** understand; unit tests **pass**.
 2. Gradle **does not** understand; unit tests **fail**.
 3. Intellij **does** understand; yet unit tests **fail**.
-4. VS Code **does not** understand pattern matching. See PatternMatchTest and RecordTest.
+4. VS Code **does** understand.
 >See maven and gradle build files for details:
 1. pom.xml / maven-compiler-plugin
 2. build.gradle.kts tasks {}
@@ -29,6 +29,22 @@ Install
 >On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
 1. [Maven](https://maven.apache.org/)
 2. [Gradle](https://gradle.org/)
+
+VS Code Settings
+----------------
+>Via menu: File > Preferences > Settings: java.jdt.ls.java.home > Edit in settings.json:
+```
+   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home",
+   "java.jdt.ls.vmargs": "--release 17 --enable-preview",
+   "java.configuration.runtimes": [
+      {
+         "name": "JavaSE-17",
+         "path": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home",
+         "default": true
+      },    
+   ],
+```
+>The above settings, ensure JDK 17 is used with preview features enabled!
 
 Build
 -----
