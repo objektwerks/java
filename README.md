@@ -15,7 +15,7 @@ Bug 2
 1. Maven **does** understand; unit tests **pass**.
 2. Gradle **does not** understand; unit tests **fail**.
 3. Intellij **does** understand; yet unit tests **fail**.
-4. VS Code **does not** understand pattern matching.
+4. VS Code **does not** understand pattern matching. See PatternMatchTest and RecordTest.
 >See:
 1. pom.xml / maven-compiler-plugin
 2. build.gradle.kts tasks {}
