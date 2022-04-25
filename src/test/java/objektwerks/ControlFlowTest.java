@@ -43,14 +43,13 @@ class ControlFlowTest {
         boolean wellPrepared = true;
         String greeting = "";
         if (wellRested) {
-          greeting = "Best of luck today!";  
           if (wellPrepared) {
             greeting = "You are ready for your exam!";
           } else {
             greeting = "Study before your exam!";
           }
         }
-        assert(greeting == "You are ready for your exam!");
+        assert(greeting.equals("You are ready for your exam!"));
     }
 
     @Test void andNotOrTest() {
