@@ -17,11 +17,16 @@ interface Behavior {
 }
 
 abstract class Canine implements Behavior {
+    String typeOf;
     abstract String bark();
     public abstract String behavior();
 }
  
 class Dog extends Canine {
+    Dog() {
+        super.typeOf = getClass().getSimpleName();
+    }
+    
     String bark() {
         return "ruf ruf";
     }
