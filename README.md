@@ -2,12 +2,19 @@ Java
 ----
 >Java feature tests using both Gradle and Maven build tools.
 
-Bug
----
+Bug 1
+-----
 >In VS Code, the Red Hat **Language Support for Java** extension contains a bug that emits this error message:
 * Project 'java' has no explicit encoding set
 * See: https://github.com/redhat-developer/vscode-java/issues/2416
 >The next release, likely 1.6.0, will include a fix. Ignore for now.
+
+Bug 2
+-----
+>Enabling JDK 17 preview features works with Maven but fails with Gradle.
+1. See pom.xml / maven-compiler-plugin for details.
+2. See build.gradle.kts for details.
+>Ultimatetly javac needs this: --enable-preview --release 17 objektwerks.PatternMatchTest.java
 
 Install
 -------
