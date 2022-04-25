@@ -11,10 +11,14 @@ Bug 1
 
 Bug 2
 -----
->Enabling JDK 17 preview features works with Maven but fails with Gradle and Intellij.
+>Enabling JDK 17 preview features works with Maven but fails with Gradle.
+>Intellij understands preview features, but fails to run preview feature tests.
 1. See pom.xml / maven-compiler-plugin for details.
 2. See build.gradle.kts for details.
->Ultimatetly javac needs this: --enable-preview --release 17 objektwerks.PatternMatchTest.java
+>javac:
+* --release 17 --enable-preview objektwerks.PatternMatchTest.java
+>java:
+* java --enable-preview  objektwerks.PatternMatchTest.java
 
 Install
 -------
