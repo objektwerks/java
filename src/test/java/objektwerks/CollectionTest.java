@@ -23,11 +23,11 @@ class CollectionTest {
 
     @Test void arrayListTest() {
         int[] xs = {1, 2, 3};
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> ys = new ArrayList<>();
         for (int x : xs) {
-          list.add(x);
+          ys.add(x);
         }
-        assert(list.size() == 3);
+        assert(ys.size() == 3);
     }
 
     @Test void listTest() {
