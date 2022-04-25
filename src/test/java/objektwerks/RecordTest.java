@@ -3,7 +3,7 @@ package objektwerks;
 import org.junit.jupiter.api.Test;
 
 sealed interface Shape permits Circle, Square {
-  final double pi = 3.14;
+  double pi = 3.14;
 
   default double area() {
     return switch (this) {
