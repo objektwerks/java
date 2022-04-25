@@ -13,7 +13,7 @@ Preview Features
 ----------------
 >Status of build tools and IDEs vis-a-vis JDK 17 **preview features**:
 1. Maven **does** understand; unit tests **pass**.
-2. Gradle **does not** understand; unit tests **fail**.
+2. Gradle **does not** understand; and unit tests **fail**.
 3. Intellij **does** understand; yet unit tests **fail**.
 4. VS Code **does** understand. See **VS Code Settings** section below!
 >See maven and gradle build files for details:
