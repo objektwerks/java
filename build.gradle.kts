@@ -11,6 +11,11 @@ application {
     mainClass.set("objektwerks.App")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
 
 tasks {
     val enablePreview = "--enable-preview"
