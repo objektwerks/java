@@ -13,11 +13,11 @@ enum Level {
 class CollectionTest {
     @Test void enumTest() {
         Level high = Level.high;
-        assert(high.toString() == "high");
+        assert(high.toString().equals("high"));
         assert(Level.valueOf("high") == high);
         assert(Level.values().length == 3);
         for (Level level : Level.values()) {
-            assert(level.name() != "");
+            assert(!level.name().isEmpty());
         }
     }
 
@@ -30,7 +30,7 @@ class CollectionTest {
     }
 
     @Test void enumMapTest() {
-        EnumMap<Level, Integer> enumMap = new EnumMap<Level, Integer>(Level.class);
+        EnumMap<Level, Integer> enumMap = new EnumMap<>(Level.class);
         enumMap.put(Level.high, 1);
         enumMap.put(Level.medium, 2);
         enumMap.put(Level.low, 3);
@@ -87,7 +87,7 @@ class CollectionTest {
     }
 
     @Test void sortedSetTest() {
-        SortedSet<Integer> set = new TreeSet<Integer>();
+        SortedSet<Integer> set = new TreeSet<>();
         set.add(3);
         set.add(2);
         set.add(1);
@@ -105,7 +105,7 @@ class CollectionTest {
     }
 
     @Test void sortedMapTest() {
-        SortedMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+        SortedMap<Integer, Integer> map = new TreeMap<>();
         map.put(1, 1);
         map.put(2, 2);
         map.put(3, 3);
