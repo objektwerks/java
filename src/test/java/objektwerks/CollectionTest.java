@@ -21,13 +21,17 @@ class CollectionTest {
             assert(level.name() != "");
         }
 
-        EnumSet<Level> enumSet = EnumSet.of(Level.high, Level.low);
-        assert(enumSet.size() == 2);
+        EnumSet<Level> enumSet = EnumSet.of(Level.high, Level.medium, Level.low);
+        assert(enumSet.size() == 3);
+        assert(enumSet.contains(Level.high));
+        assert(enumSet.contains(Level.medium));
+        assert(enumSet.contains(Level.low));
 
         EnumMap<Level, Integer> enumMap = new EnumMap<Level, Integer>(Level.class);
         enumMap.put(Level.high, 1);
         enumMap.put(Level.medium, 2);
         enumMap.put(Level.low, 3);
+        assert(enumMap.size() == 3);
         assert(enumMap.get(Level.high) == 1);
         assert(enumMap.get(Level.medium) == 2);
         assert(enumMap.get(Level.low) == 3);
