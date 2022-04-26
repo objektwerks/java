@@ -1,6 +1,7 @@
 package objektwerks;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
@@ -51,6 +52,17 @@ class CollectionTest {
         assert(enumMap.get(Level.high) == 1);
         assert(enumMap.get(Level.medium) == 2);
         assert(enumMap.get(Level.low) == 3);
+    }
+
+    public int add(Integer... zeroOrMoreIntegers) {
+        return Stream
+            .of(zeroOrMoreIntegers)
+            .reduce(Integer::sum)
+            .orElse(-1);
+    }
+
+    @Test void varargsTest() {
+        assert(add(1, 2, 3) == 6);
     }
 
     @Test void arrayTest() {
