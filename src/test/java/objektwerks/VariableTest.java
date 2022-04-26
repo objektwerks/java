@@ -11,8 +11,8 @@ class VariableTest {
   }
 
   @Test void charTest() {
-      char number = '1';
-      char letter = 'a';
+      var number = '1';
+      var letter = 'a';
       assert(Character.isDigit(number));
       assert(Character.isLetter(letter));
       assert(number != letter);
