@@ -17,12 +17,6 @@ Preview Features
 >java:
 * java --release 17 --enable-preview
 
-Install
--------
->On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
-1. [Maven](https://maven.apache.org/)
-2. [Gradle](https://gradle.org/)
-
 VS Code Settings
 ----------------
 >Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
@@ -38,6 +32,12 @@ VS Code Settings
    ],
 ```
 >These settings ensure JDK 17 is used with preview features **enabled**!
+
+Install
+-------
+>On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
+1. [Maven](https://maven.apache.org/)
+2. [Gradle](https://gradle.org/)
 
 Build
 -----
