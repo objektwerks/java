@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
@@ -76,5 +77,14 @@ class StreamTest {
 		try ( var lines = Files.lines(path) ) {
 			assert(lines.count() == 201);
 		}
+	}
+
+	@Test void parallelTest() {
+		var optional = IntStream
+				.range(1, 1000001)
+				.parallel()
+				.map(i -> i + 1)
+				.reduce(Integer::sum);
+		assert(optional.orElse(-1) == 1785293664);
 	}
 }
