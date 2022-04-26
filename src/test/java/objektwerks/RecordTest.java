@@ -17,7 +17,6 @@ record Square(double side) implements Shape {}
 
 /**
  * This test passes with Maven but fails with Gradle. Fix unknown at this time.
- * Intellij understands this code but VS Code does not.
  */
 class RecordTest {
     @Test void recordTest() {
