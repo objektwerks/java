@@ -47,7 +47,14 @@ class StreamTest {
 				.of(1, 2, 3)
 				.dropWhile(i -> i % 2 != 0)
 				.toList();
-		System.out.println(list);
 		assert(list.equals(List.of(2, 3)));
+	}
+
+	@Test void skipTest() {
+		var count = Stream
+				.of(1, 2, 3)
+				.skip(2)
+				.count();
+		assert(count == 1);
 	}
 }
