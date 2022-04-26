@@ -25,7 +25,7 @@ class GenericTest {
         assert(box.get() == 1);
     }
 
-    @Test void genericMethodTest() {
+    @Test void methodTest() {
         var box1 = new Box<Integer>();
         var box2 = new Box<Integer>();
         var box3 = new Box<Integer>();
