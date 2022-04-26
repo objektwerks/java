@@ -1,6 +1,18 @@
 Java
 ----
->Java feature tests using both Gradle and Maven build tools.
+>Java feature tests to include:
+* classes
+* collections
+* control flow
+* datetime
+* for iterators
+* generics
+* pattern matching
+* records
+* streams
+* variables
+* varargs
+>And quite possibly a few more features.:)
 
 Preview Features
 ----------------
