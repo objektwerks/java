@@ -19,7 +19,7 @@ Java
 Java-X
 ------
 >See this [project](https://github.com/objektwerks/java.x) for somewhat dated yet useful work on:
-1. aop ( aspects )
+1. aop ( aspect-oriented-programming )
 2. hibernate ( object-relational mapping )
 3. models ( homeschool, beer )
 4. jaxb ( java <-> xml binding )
