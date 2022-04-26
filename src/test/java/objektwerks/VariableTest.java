@@ -20,8 +20,8 @@ class VariableTest {
   }
 
   @Test void stringTest() {
-      String fred = "Fred Flintstone";
-      String barney = "Barney Rebel";
+      var fred = "Fred Flintstone";
+      var barney = "Barney Rebel";
       assert(fred != barney);
       assert(!fred.equals(barney));
       assert(fred.concat(barney).equals(fred + barney));
