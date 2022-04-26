@@ -7,8 +7,8 @@ sealed interface Shape permits Circle, Square {
 
   default double area() {
     return switch (this) {
-        case Circle c -> pi * Math.pow(c.diameter() / 2, 2);
-        case Square s -> Math.pow(s.side(), 2);
+        case Circle circle -> pi * Math.pow(circle.diameter() / 2, 2);
+        case Square square -> Math.pow(square.side(), 2);
     };
 }
 }
