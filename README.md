@@ -18,7 +18,7 @@ Java
 
 Java-X
 ------
->See this [project](https://github.com/objektwerks/java.x) for somewhat dated work on:
+>See this [project](https://github.com/objektwerks/java.x) for somewhat dated yet useful work on:
 1. aop ( aspects )
 2. hibernate ( object-relational mapping )
 3. models ( homeschool, beer )
