@@ -31,7 +31,7 @@ VS Code Settings
       },    
    ],
 ```
->These settings are supposed to ensure JDK 17 preview features **enabled**!
+>These settings are supposed to ensure JDK 17 preview features are **enabled**!
 >**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 17 --enable-preview"```
 >fundamentally disables Java support in VS Code.
 
