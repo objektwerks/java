@@ -64,7 +64,8 @@ class StreamTest {
 
 	@Test void fileTest() throws IOException {
 		var path = Paths.get("./LICENSE");
-		var lines = Files.lines(path);
-		assert(lines.count() == 201);
+		try ( var lines = Files.lines(path) ) {
+			assert(lines.count() == 201);
+		}
 	}
 }
