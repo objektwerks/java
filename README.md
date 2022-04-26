@@ -49,6 +49,7 @@ Test
 ----
 1. gradle clean test
 2. mvn clean test
+3. In Intellij, right-select java > src > test > java > objektwerks > Run Tests in objektwerks
 
 Run
 ---
