@@ -3,6 +3,7 @@ package objektwerks;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -10,6 +11,15 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 
 class StreamTest {
+	@Test void arrayTest() {
+		int[] array = {1, 2, 3};
+		var optional = Arrays
+				.stream(array)
+				.map(i -> i * i)
+				.reduce( (i, j) -> i + j );
+		assert(optional.orElse(-1) == 14);
+	}
+
 	@Test void collectTest() {
 		var list = Stream
 				.of(1, 2, 3)
