@@ -16,6 +16,18 @@ Java
 * varargs
 >And quite possibly a few more features.:)
 
+Java-X
+------
+>See this [project](https://github.com/objektwerks/java.x) for somewhat dated work on:
+1. aop ( aspects )
+2. hibernate ( object-relational mapping )
+3. models ( homeschool, beer )
+4. jaxb ( java <-> xml binding )
+5. jms ( messaging )
+6. jpa ( object-relational mapping )
+7. quartz ( scheduling )
+8. xml
+
 Preview Features
 ----------------
 >Status of build tools and IDEs vis-a-vis JDK 17 **preview features**:
