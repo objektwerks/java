@@ -1,5 +1,9 @@
 package objektwerks;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -56,5 +60,11 @@ class StreamTest {
 				.skip(2)
 				.count();
 		assert(count == 1);
+	}
+
+	@Test void fileTest() throws IOException {
+		var path = Paths.get("./LICENSE");
+		var lines = Files.lines(path);
+		assert(lines.count() == 201);
 	}
 }
