@@ -75,7 +75,7 @@ Learn Java
 3. Download and install:
    1. [Java JDK 17]( https://www.oracle.com/java/technologies/downloads/#java17 ).
    2. [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
-4. Start learning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java).
+4. Start learning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java). See Resources below.
 5. Maintain all Java project work in one or more Github repositories as required.
 
 >***Always keep it simple!*** ***And never forget Murphy's law!***
