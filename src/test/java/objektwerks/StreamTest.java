@@ -16,6 +16,16 @@ class StreamTest {
 		assert(list.equals(Arrays.asList(2, 4)));
 	}
 
+	@Test void listTest() {
+		var list = Stream
+				.of(1, 2, 3)
+				.map(i -> i * i * i)
+				.filter(i -> i % 2 != 0)
+				.toList();
+		System.out.println(list);
+		assert(list.equals(Arrays.asList(1, 27)));
+	}
+
 	@Test void reduceTest() {
 		var optional = Stream
 				.of(1, 2, 3)
