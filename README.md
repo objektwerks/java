@@ -5,11 +5,13 @@ Java
 * collections
 * control flow
 * datetime
+* enums
 * for iterators
 * generics
 * pattern matching
 * records
 * streams
+* text blocks
 * variables
 * varargs
 >And quite possibly a few more features.:)
