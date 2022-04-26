@@ -34,6 +34,5 @@ class GenericTest {
         box3.set(1);
         assert(!Box.compare(box1, box2));
         assert(Box.compare(box1, box3));
-
     }
 }
