@@ -19,7 +19,7 @@ class Box<T> {
 }
 
 class GenericTest {
-    @Test void genericClassTest() {
+    @Test void classTest() {
         var box = new Box<Integer>();
         box.set(1);
         assert(box.get() == 1);
