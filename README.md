@@ -11,12 +11,11 @@ Preview Features
    1. **Solution:** Configure Intellij to run tests using Intellij and Maven.
 4. VS Code **does not** understand. See **VS Code Settings** section below!
 >See maven and gradle build files for details:
-1. pom.xml / maven-compiler-plugin
-2. build.gradle.kts tasks {}
->javac:
-* javac --release 17 --enable-preview
->java:
-* java --release 17 --enable-preview
+1. pom.xml
+2. build.gradle.kts
+>Commandline options:
+* javac: ```javac --release 17 --enable-preview```
+* java: ```java --release 17 --enable-preview```
 
 VS Code Settings
 ----------------
@@ -32,9 +31,9 @@ VS Code Settings
       },    
    ],
 ```
->These settings ensure JDK 17 is used with preview features **enabled**!
->**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 17 --enable-preview"``` fundamentally disables
->Java support in VS Code. Use Intellij, instead!
+>These settings are supposed to ensure JDK 17 preview features **enabled**!
+>**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 17 --enable-preview"```
+>fundamentally disables Java support in VS Code.
 
 Install
 -------
@@ -75,21 +74,18 @@ Learn Java
 2. Learn [Git Basics]( https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ ).
 3. Download and install:
    1. [Java JDK 17]( https://www.oracle.com/java/technologies/downloads/#java17 ).
-   2. [Visual Studio (VS) Code]( https://code.visualstudio.com/download ).
-   3. VS Code [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
-   4. [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
-4. View short video tutorial on [VS Code]( https://code.visualstudio.com/learn/get-started/basics ).
-5. Start learning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java).
-6. Maintain all Java project work in one or more Github repositories as required.
-
->I recommend using both VS Code and Intellij, given their popularity in the Java space. Eventually you'll develop a
->preference for one, but know both.
-
->The following IDEs are also used in the Java community:
-1. [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
-2. [Netbeans](https://netbeans.apache.org/)
+   2. [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
+4. Start learning Java with [Learn Java Tutorial](https://www.codecademy.com/learn/learn-java).
+5. Maintain all Java project work in one or more Github repositories as required.
 
 >***Always keep it simple!*** ***And never forget Murphy's law!***
+
+IDEs
+----
+>The following IDEs are also used in the Java community:
+1. [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
+2. [Visual Studio (VS) Code]( https://code.visualstudio.com/download ).
+3. [Netbeans](https://netbeans.apache.org/)
 
 Resources
 ---------
