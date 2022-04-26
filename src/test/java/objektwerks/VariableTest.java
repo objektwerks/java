@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 class VariableTest {
   @Test void booleanTest() {
-      boolean isRound = true;
-      boolean isSqaure = false;
+      var isRound = true;
+      var isSqaure = false;
       assert(isRound);
       assert(!isSqaure);
   }
