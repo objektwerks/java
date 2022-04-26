@@ -7,7 +7,15 @@ import org.junit.jupiter.api.Test;
 enum Level {
     high,
     medium,
-    low
+    low;
+
+    int toInt() {
+        return switch(this) {
+            case high -> 1;
+            case medium -> 2;
+            case low -> 3;
+        };
+    }
 }
 
 class CollectionTest {
@@ -15,10 +23,15 @@ class CollectionTest {
         var high = Level.high;
         assert(high.toString().equals("high"));
         assert(Level.valueOf("high") == high);
+
         assert(Level.values().length == 3);
         for (Level level : Level.values()) {
             assert(!level.name().isEmpty());
         }
+
+        assert(Level.high.toInt() == 1);
+        assert(Level.medium.toInt() == 2);
+        assert(Level.low.toInt() == 3);
     }
 
     @Test void enumSetTest() {
