@@ -21,19 +21,19 @@ record Square(double side) implements Shape {}
  */
 class RecordTest {
     @Test void recordTest() {
-        Circle circle = new Circle(6.0);
+        var circle = new Circle(6.0);
         assert(circle.diameter() == 6.0);
         assert(circle.area() == 28.26);
 
-        Square square = new Square(4.0);
+        var square = new Square(4.0);
         assert(square.side() == 4.0);
         assert(square.area() == 16.0);
    }
 
     @Test void equalsTest() {
-      Shape shapeA = new Square(1.0);
-      Shape shapeB = new Square(2.0);
-      Shape shapeC = new Square(2.0);
+      var shapeA = new Square(1.0);
+      var shapeB = new Square(2.0);
+      var shapeC = new Square(2.0);
       assert(!shapeA.equals(shapeB));
       assert(shapeB.equals(shapeC));
     }
