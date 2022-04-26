@@ -37,6 +37,13 @@ class VariableTest {
       assert(barney.endsWith("Rebel"));
   }
 
+  @Test void textBlockTest() {
+      var text = """
+            The lazy brown fox jumped over the
+            fence, and was never seen again!""";
+      assert(text.length() == 67);
+  }
+
   @Test void byteTest() {
       byte low = 1;
       byte high = 127;
