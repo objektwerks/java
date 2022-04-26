@@ -9,7 +9,7 @@ Preview Features
 2. Gradle **does not** understand; and unit tests **fail**.
 3. Intellij **does** understand; yet unit tests **fail** since it defaults to Gradle. 
    1. **Solution:** Configure Intellij to run tests using Intellij and Maven.
-4. VS Code **does** understand. See **VS Code Settings** section below!
+4. VS Code **does not** understand. See **VS Code Settings** section below!
 >See maven and gradle build files for details:
 1. pom.xml / maven-compiler-plugin
 2. build.gradle.kts tasks {}
@@ -33,6 +33,8 @@ VS Code Settings
    ],
 ```
 >These settings ensure JDK 17 is used with preview features **enabled**!
+>**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 17 --enable-preview"``` fundamentally disables
+>Java support in VS Code. Use Intellij, instead!
 
 Install
 -------
