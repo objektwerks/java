@@ -1,6 +1,7 @@
 package objektwerks;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -23,7 +24,7 @@ class StreamTest {
 				.filter(i -> i % 2 != 0)
 				.toList();
 		System.out.println(list);
-		assert(list.equals(Arrays.asList(1, 27)));
+		assert(list.equals(List.of(1, 27)));
 	}
 
 	@Test void reduceTest() {
@@ -32,5 +33,13 @@ class StreamTest {
 				.map(i -> i * i)
 				.reduce(Integer::sum);
 		assert(optional.orElse(-1) == 14);
+	}
+
+	@Test void takeWhileTest() {
+		var list = Stream
+				.of(1, 2, 3)
+				.takeWhile(i -> i % 2 != 0)
+				.toList();
+		assert(list.equals(List.of(1)));
 	}
 }
