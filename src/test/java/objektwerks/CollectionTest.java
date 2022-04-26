@@ -12,7 +12,7 @@ enum Level {
 
 class CollectionTest {
     @Test void enumTest() {
-        Level high = Level.high;
+        var high = Level.high;
         assert(high.toString().equals("high"));
         assert(Level.valueOf("high") == high);
         assert(Level.values().length == 3);
@@ -22,7 +22,7 @@ class CollectionTest {
     }
 
     @Test void enumSetTest() {
-        EnumSet<Level> enumSet = EnumSet.of(Level.high, Level.medium, Level.low);
+        var enumSet = EnumSet.of(Level.high, Level.medium, Level.low);
         assert(enumSet.size() == 3);
         assert(enumSet.contains(Level.high));
         assert(enumSet.contains(Level.medium));
@@ -30,7 +30,7 @@ class CollectionTest {
     }
 
     @Test void enumMapTest() {
-        EnumMap<Level, Integer> enumMap = new EnumMap<>(Level.class);
+        var enumMap = new EnumMap<Level, Integer>(Level.class);
         enumMap.put(Level.high, 1);
         enumMap.put(Level.medium, 2);
         enumMap.put(Level.low, 3);
@@ -64,13 +64,13 @@ class CollectionTest {
     }
 
     @Test void immutableListTest() {
-        List<Integer> immutableList = List.of(1, 2, 3);
+        var immutableList = List.of(1, 2, 3);
         assert(immutableList.size() == 3);
         assert(immutableList.get(0) == 1);
     }
 
     @Test void mutableListTest() {
-        List<Integer> mutableList = new ArrayList<Integer>();
+        var mutableList = new ArrayList<Integer>();
         mutableList.add(1);
         mutableList.add(2);
         mutableList.add(3);
@@ -79,7 +79,7 @@ class CollectionTest {
     }
 
     @Test void setTest() {
-        Set<Integer> set = Set.of(1, 2, 3);
+        var set = Set.of(1, 2, 3);
         assert(set.size() == 3);
         assert(set.contains(1));
         assert(set.contains(2));
@@ -87,7 +87,7 @@ class CollectionTest {
     }
 
     @Test void sortedSetTest() {
-        SortedSet<Integer> set = new TreeSet<>();
+        var set = new TreeSet<Integer>();
         set.add(3);
         set.add(2);
         set.add(1);
@@ -97,7 +97,7 @@ class CollectionTest {
     }
 
     @Test void mapTest() {
-        Map<Integer, Integer> map = Map.of(1, 1, 2, 2, 3, 3);
+        var map = Map.of(1, 1, 2, 2, 3, 3);
         assert(map.size() == 3 );
         assert(map.get(1) == 1);
         assert(map.get(2) == 2);
@@ -105,7 +105,7 @@ class CollectionTest {
     }
 
     @Test void sortedMapTest() {
-        SortedMap<Integer, Integer> map = new TreeMap<>();
+        var map = new TreeMap<Integer, Integer>();
         map.put(1, 1);
         map.put(2, 2);
         map.put(3, 3);
