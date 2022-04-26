@@ -100,3 +100,4 @@ Resources
 2. [Jenkov Java Tutorials](https://jenkov.com/tutorials/java/index.html)
 3. [Java Tutorials Point](https://www.tutorialspoint.com/java/index.htm)
 4. [Manning Books](https://www.manning.com/)
+5. [Amazon Java Best Sellers](https://www.amazon.com/Best-Sellers-Books-Java-Programming/zgbs/books/3608)
