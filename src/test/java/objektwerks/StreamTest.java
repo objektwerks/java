@@ -42,4 +42,13 @@ class StreamTest {
 				.toList();
 		assert(list.equals(List.of(1)));
 	}
+
+	@Test void dropWhileTest() {
+		var list = Stream
+				.of(1, 2, 3)
+				.dropWhile(i -> i % 2 != 0)
+				.toList();
+		System.out.println(list);
+		assert(list.equals(List.of(2, 3)));
+	}
 }
