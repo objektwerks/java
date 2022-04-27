@@ -6,6 +6,7 @@ Java
 * control flow
 * datetime
 * enums
+* futures
 * for iterators
 * generics
 * pattern matching
