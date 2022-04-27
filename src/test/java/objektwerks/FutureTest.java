@@ -20,8 +20,8 @@ class FutureTest {
     }
 
     @Test void completableFutureTest() throws InterruptedException, ExecutionException {
-        Future<String> completableFuture = helloFuture();
-        String result = completableFuture.get();
+        var completableFuture = helloFuture();
+        var result = completableFuture.get();
         assertEquals("Hello, future!", result);
     }
 }
