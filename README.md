@@ -28,6 +28,7 @@ Java-X
 6. jpa ( object-relational mapping )
 7. quartz ( scheduling )
 8. xml ( structured markup language )
+9. spring ( dependency injection framework and more )
 
 Preview Features
 ----------------
