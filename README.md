@@ -27,7 +27,7 @@ Java-X
 5. jms ( messaging )
 6. jpa ( object-relational mapping )
 7. quartz ( scheduling )
-8. xml
+8. xml ( structured markup language )
 
 Preview Features
 ----------------
