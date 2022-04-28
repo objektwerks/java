@@ -30,6 +30,10 @@ Java-X
 8. xml ( structured markup language )
 9. spring ( dependency injection framework and more )
 
+New Features ( JDK 8 to JDK 18 )
+--------------------------------
+* [New Features](https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-18/)
+
 Preview Features
 ----------------
 >Status of build tools and IDEs vis-a-vis JDK 17 **preview features**:
