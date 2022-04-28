@@ -20,6 +20,13 @@ class RecursionTest {
         }
     }
 
+    @Test void productTest() {
+        int[] xs = {1, 2, 3};
+        var product = product( xs, 1);
+        System.out.println("product: " + product);
+        assert(product == 6);
+    }
+
     int sum(int[] xs, int acc) {
         if (xs.length == 0) return acc;
         else {
@@ -35,17 +42,19 @@ class RecursionTest {
         }
     }
 
-    @Test void productTest() {
-        int[] xs = {1, 2, 3};
-        var product = product( xs, 1);
-        System.out.println("product: " + product);
-        assert(product == 6);
-    }
-
     @Test void sumTest() {
         int[] xs = {1, 2, 3};
         var sum = sum( xs, 0);
         System.out.println("sum: " + sum);
         assert(sum == 6);
+    }
+
+    int factorial(int n, int acc) {
+        if (n < 1) return acc;
+        else return factorial(n - 1, acc * n);
+    }
+
+    @Test void factorialTest() {
+        assert(factorial(3, 1) == 6);
     }
 }
