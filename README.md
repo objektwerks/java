@@ -11,6 +11,7 @@ Java
 * generics
 * pattern matching
 * records
+* recursion
 * streams
 * text blocks
 * variables
