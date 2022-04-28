@@ -51,13 +51,13 @@ class RecursionTest {
         assert(sum == 6);
     }
 
-    List<String> reverse(List<String> values, List<String> acc) {
-        if (values.isEmpty()) return acc;
+    List<String> reverse(List<String> strings, List<String> acc) {
+        if (strings.isEmpty()) return acc;
         else {
             var from = 1;
-            var to = values.size();
-            var head = values.get(0);
-            var tail = values.subList(from, to);
+            var to = strings.size();
+            var head = strings.get(0);
+            var tail = strings.subList(from, to);
             System.out.println("from: " + from);
             System.out.println("to: " + to);
             System.out.println("head: " + head);
