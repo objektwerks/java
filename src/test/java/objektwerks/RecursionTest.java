@@ -87,12 +87,18 @@ class RecursionTest {
         assert(factorial(3, 1) == 6);
     }
 
-    long fibonacci(long n) {
+    long nonTailRecFibonacci(long n) {
         if ((n == 0) || (n == 1)) return n;
-        else return fibonacci(n - 1) + fibonacci(n - 2);
+        else return nonTailRecFibonacci(n - 1) + nonTailRecFibonacci(n - 2);
+    }
+
+    long tailRecFibonacci(long n, long a, long b) {
+        if (n == 0) return a;
+        else return tailRecFibonacci(n -1, b, a + b);
     }
 
     @Test void fibonacciTest() {
-        assert(fibonacci(39) == 63245986);
+        assert(nonTailRecFibonacci(39) == 63245986);
+        assert(tailRecFibonacci(39, 0, 1) == 63245986);
     }
 }
