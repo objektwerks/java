@@ -94,17 +94,6 @@ class VariableTest {
       assert(immutablePI > 3.13);
   }
 
-  @Test void mathTest() {
-      int x = 20;
-      int y = 10;
-      assert(x + y == 30);
-      assert(x - y == 10);
-      assert(x * y == 200);
-      assert(x / y == 2);
-      assert(x % 2 == 0 && y % 2 == 0);
-      assert(Math.random() != 0.0);
-  }
-
   @Test void comparisonTest() {
       int x = 1;
       int y = 2;
