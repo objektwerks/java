@@ -22,7 +22,7 @@ class RecursionTest {
     @Test void sumTest() {
         int[] xs = {1, 2, 3};
         var sum = sum( xs, 0);
-        System.out.println("sum: " + sum);
+        debug("sum: " + sum);
         assert(sum == 6);
     }
 
@@ -41,7 +41,7 @@ class RecursionTest {
     @Test void productTest() {
         int[] xs = {1, 2, 3};
         var product = product( xs, 1);
-        System.out.println("product: " + product);
+        debug("product: " + product);
         assert(product == 6);
     }
 
@@ -52,6 +52,7 @@ class RecursionTest {
             var to = strings.size();
             var head = strings.get(0);
             var tail = strings.subList(from, to);
+            debug(from, to, head, tail);
             acc.add(0, head);
             return reverse(tail, acc);
         }
@@ -64,7 +65,7 @@ class RecursionTest {
         values.add("c");
         var acc = new ArrayList<String>();
         var reversed = reverse(values, acc);
-        System.out.println("reversed: " + reversed);
+        debug("reversed: " + reversed);
         assert(reversed.equals(List.of("c", "b", "a")));
     }
 
@@ -97,5 +98,16 @@ class RecursionTest {
         System.out.println("to: " + to);
         System.out.println("head: " + head);
         System.out.println("tail: " + Arrays.toString(tail));
+    }
+
+    void debug(int from, int to, String head, List<String> tail) {
+        System.out.println("from: " + from);
+        System.out.println("to: " + to);
+        System.out.println("head: " + head);
+        System.out.println("tail: " + tail);
+    }
+
+    void debug(String message) {
+        System.out.println(message);
     }
 }
