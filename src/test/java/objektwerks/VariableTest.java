@@ -2,6 +2,9 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Random;
+import java.util.UUID;
+
 class VariableTest {
   @Test void booleanTest() {
       var isRound = true;
@@ -126,5 +129,12 @@ class VariableTest {
     assert(x == 2);
     x--;
     assert(x == 1);
+  }
+
+  @Test void uuidTest() {
+      var uuid = UUID.randomUUID();
+      var nextUuid = UUID.randomUUID();
+      assert(!uuid.equals(nextUuid));
+      assert(!uuid.toString().isEmpty());
   }
 }
