@@ -9,6 +9,7 @@ Java
 * futures
 * for iterators
 * generics
+* math
 * pattern matching
 * random
 * records
