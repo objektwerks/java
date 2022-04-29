@@ -10,6 +10,7 @@ Java
 * for iterators
 * generics
 * pattern matching
+* random
 * records
 * recursion
 * streams
