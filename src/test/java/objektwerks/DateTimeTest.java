@@ -37,4 +37,13 @@ class DateTimeTest {
         assert(datetime.getHour() == parsedDatetime.getHour());
         assert(datetime.getMinute() <= parsedDatetime.getMinute());
     }
+
+    @Test void comparisonTest() {
+        LocalDate firstDate = LocalDate.of(2022, 2, 2);
+        LocalDate secondDate = LocalDate.of(2022, 1, 1);
+        assert(firstDate.isAfter(secondDate));
+        assert(secondDate.isBefore(firstDate));
+        assert(firstDate.isEqual(firstDate));
+        assert(!firstDate.isEqual(secondDate));
+    }
 }
