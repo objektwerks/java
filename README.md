@@ -131,3 +131,4 @@ Resources
 6. [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
 7. [Coursera Java](https://www.coursera.org/search?query=java&)
 8. [Rock the JVM Java Video](https://www.youtube.com/watch?v=sjGjoDiD2F8)
+9. [Baeldung](https://www.baeldung.com/)
