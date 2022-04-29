@@ -39,11 +39,17 @@ class DateTimeTest {
     }
 
     @Test void comparisonTest() {
-        LocalDate firstDate = LocalDate.of(2022, 2, 2);
-        LocalDate secondDate = LocalDate.of(2022, 1, 1);
+        var firstDate = LocalDate.of(2022, 2, 2);
+        var secondDate = LocalDate.of(2022, 1, 1);
         assert(firstDate.isAfter(secondDate));
         assert(secondDate.isBefore(firstDate));
         assert(firstDate.isEqual(firstDate));
         assert(!firstDate.isEqual(secondDate));
+
+        var newYorkZDT = ZonedDateTime.of(2019, 8, 10, 8, 0, 0, 0, ZoneId.of("America/New_York"));
+        var berlinZDT = ZonedDateTime.of(2019, 8, 10, 14, 0, 0, 0, ZoneId.of("Europe/Berlin"));
+        assert(!newYorkZDT.isAfter(berlinZDT));
+        assert(!newYorkZDT.isBefore(berlinZDT));
+        assert(newYorkZDT.isEqual(berlinZDT));
     }
 }
