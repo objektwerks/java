@@ -94,17 +94,13 @@ class RecursionTest {
     }
 
     void debug(int from, int to, int head, int[] tail) {
-        System.out.println("from: " + from);
-        System.out.println("to: " + to);
-        System.out.println("head: " + head);
-        System.out.println("tail: " + Arrays.toString(tail));
+        System.out.println("from: " + from + " to: " + to);
+        System.out.println("head: " + head + " tail: " + Arrays.toString(tail));
     }
 
     void debug(int from, int to, String head, List<String> tail) {
-        System.out.println("from: " + from);
-        System.out.println("to: " + to);
-        System.out.println("head: " + head);
-        System.out.println("tail: " + tail);
+        System.out.println("from: " + from + " to: " + to);
+        System.out.println("head: " + head + " tail: " + tail);
     }
 
     void debug(String message) {
