@@ -14,10 +14,7 @@ class RecursionTest {
             var to = xs.length;
             var head = xs[0];
             var tail = Arrays.copyOfRange(xs, from, to);
-            System.out.println("from: " + from);
-            System.out.println("to: " + to);
-            System.out.println("head: " + head);
-            System.out.println("tail: " + Arrays.toString(tail));
+            debug(from, to, head, tail);
             return sum(tail, acc + head);
         }
     }
@@ -36,10 +33,7 @@ class RecursionTest {
             var to = xs.length;
             var head = xs[0];
             var tail = Arrays.copyOfRange(xs, from, to);
-            System.out.println("from: " + from);
-            System.out.println("to: " + to);
-            System.out.println("head: " + head);
-            System.out.println("tail: " + Arrays.toString(tail));
+            debug(from, to, head, tail);
             return product(tail, acc * head);
         }
     }
@@ -58,10 +52,6 @@ class RecursionTest {
             var to = strings.size();
             var head = strings.get(0);
             var tail = strings.subList(from, to);
-            System.out.println("from: " + from);
-            System.out.println("to: " + to);
-            System.out.println("head: " + head);
-            System.out.println("tail: " + tail);
             acc.add(0, head);
             return reverse(tail, acc);
         }
@@ -100,5 +90,12 @@ class RecursionTest {
     @Test void fibonacciTest() {
         assert(nonTailRecFibonacci(39) == 63245986);
         assert(tailRecFibonacci(39, 0, 1) == 63245986);
+    }
+
+    void debug(int from, int to, int head, int[] tail) {
+        System.out.println("from: " + from);
+        System.out.println("to: " + to);
+        System.out.println("head: " + head);
+        System.out.println("tail: " + Arrays.toString(tail));
     }
 }
