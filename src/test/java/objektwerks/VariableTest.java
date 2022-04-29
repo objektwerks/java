@@ -124,11 +124,11 @@ class VariableTest {
   }
 
   @Test void incrementDecrementTest() {
-    int x = 1;
-    x++;
-    assert(x == 2);
-    x--;
-    assert(x == 1);
+      int x = 1;
+      x++;
+      assert(x == 2);
+      x--;
+      assert(x == 1);
   }
 
   @Test void uuidTest() {
