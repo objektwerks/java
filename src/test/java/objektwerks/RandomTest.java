@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 import java.util.UUID;
 
-public class RandomTest {
+class RandomTest {
     @Test void uuidTest() {
         var uuid = UUID.randomUUID();
         var nextUuid = UUID.randomUUID();
