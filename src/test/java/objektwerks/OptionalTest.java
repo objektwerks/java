@@ -1,8 +1,9 @@
 package objektwerks;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OptionalTest {
     @Test void emptyTest() {
@@ -16,6 +17,13 @@ class OptionalTest {
         assert(!optional.isEmpty());
         assert(optional.isPresent());
         assert(optional.orElse(-1) == 1);
+    }
+
+    @Test void ifPresentTest() {
+        var optional = Optional.of(1);
+        optional.ifPresent( value -> assertEquals(value, 1) );
+        assert(!optional.isEmpty());
+        assert(optional.isPresent());
     }
 
     @Test void ofNullableTest() {
