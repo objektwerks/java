@@ -51,4 +51,8 @@ class OptionalTest {
         var optional = Optional.of(1);
         optional.ifPresent( value -> assertEquals(value, 1) );
     }
+
+    @Test void mapTest() {
+        assert(Optional.of(4).map(Math::sqrt).get() == 2.0);
+    }
 }
