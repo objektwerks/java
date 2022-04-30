@@ -6,7 +6,7 @@ import java.util.Optional;
 
 class OptionalTest {
     @Test void optionalTest() {
-        var empty = Optional.<String>empty();
+        var empty = Optional.<Integer>empty();
         assert(!empty.isPresent());
 
         var optional = Optional.of(1);
