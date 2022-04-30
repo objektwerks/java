@@ -10,6 +10,7 @@ Java
 * for iterators
 * generics
 * math
+* optional
 * pattern matching
 * random
 * records
