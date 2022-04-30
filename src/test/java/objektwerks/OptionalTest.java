@@ -4,8 +4,8 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class OptionalTest {
     @Test void emptyTest() {
@@ -19,6 +19,10 @@ class OptionalTest {
         var optional = Optional.ofNullable(nullable);
         assert(optional.isEmpty());
         assert(!optional.isPresent());
+    }
+
+    @Test void orTest() {
+        assert(Optional.<Integer>empty().or(() -> Optional.of(1)).get() == 1);
     }
 
     @Test void getTest() {
