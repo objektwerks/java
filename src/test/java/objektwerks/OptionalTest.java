@@ -1,9 +1,11 @@
 package objektwerks;
 
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class OptionalTest {
     @Test void emptyTest() {
@@ -32,6 +34,13 @@ class OptionalTest {
     @Test void orElseGetTest() {
         var optional = Optional.<Integer>empty();
         assert(optional.orElseGet(() -> 1) == 1); // default value ONLY created when empty!
+    }
+
+    @Test void orElseThrowTest() {
+        Integer nullable = null;
+        assertThrows(NoSuchElementException.class, () -> {
+            Optional.ofNullable(nullable).orElseThrow();
+        });
     }
 
     @Test void ifPresentTest() {
