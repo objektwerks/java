@@ -55,4 +55,11 @@ class OptionalTest {
     @Test void mapTest() {
         assert(Optional.of(4).map(Math::sqrt).get() == 2.0);
     }
+
+    @Test void flatMapTest() {
+        var box = new Box<Integer>();
+        box.set(-1);
+        var optionalBox = Optional.of(box);
+        assert(optionalBox.flatMap( b -> Optional.of( Math.abs( b.get() ) ) ).orElse(-1) == 1);
+    }
 }
