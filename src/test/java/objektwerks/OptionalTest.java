@@ -14,7 +14,7 @@ class OptionalTest {
 
     @Test void ofOrElseTest() {
         var optional = Optional.of(1);
-        assert(optional.orElse(-1) == 1); // default value ALWAYS created!
+        assert(optional.orElse(-1) == 1); // default value ALWAYS if present or empty created!
         assert(!optional.isEmpty());
         assert(optional.isPresent());
     }
