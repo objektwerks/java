@@ -62,4 +62,8 @@ class OptionalTest {
         var optionalBox = Optional.of(box);
         assert(optionalBox.flatMap( b -> Optional.of( Math.abs( b.get() ) ) ).orElse(-1) == 1);
     }
+
+    @Test void filterTest() {
+        assert(Optional.of(2).filter( i -> i % 2 == 0 ).isPresent());
+    }
 }
