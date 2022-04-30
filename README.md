@@ -125,12 +125,12 @@ IDEs
 
 Resources
 ---------
-1. [Oracle Java Tutorials](https://docs.oracle.com/javase/tutorial/)
-2. [Jenkov Java Tutorials](https://jenkov.com/tutorials/java/index.html)
-3. [Java Tutorials Point](https://www.tutorialspoint.com/java/index.htm)
-4. [Manning Books](https://www.manning.com/)
-5. [Amazon Java Best Sellers](https://www.amazon.com/Best-Sellers-Books-Java-Programming/zgbs/books/3608)
-6. [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
-7. [Coursera Java](https://www.coursera.org/search?query=java&)
-8. [Rock the JVM Java Video](https://www.youtube.com/watch?v=sjGjoDiD2F8)
-9. [Baeldung](https://www.baeldung.com/)
+1. [Baeldung](https://www.baeldung.com/)
+2. [Oracle Java Tutorials](https://docs.oracle.com/javase/tutorial/)
+3. [Jenkov Java Tutorials](https://jenkov.com/tutorials/java/index.html)
+4. [Java Tutorials Point](https://www.tutorialspoint.com/java/index.htm)
+5. [Manning Books](https://www.manning.com/)
+6. [Amazon Java Best Sellers](https://www.amazon.com/Best-Sellers-Books-Java-Programming/zgbs/books/3608)
+7. [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
+8. [Coursera Java](https://www.coursera.org/search?query=java&)
+9. [Rock the JVM Java Video](https://www.youtube.com/watch?v=sjGjoDiD2F8)
