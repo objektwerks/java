@@ -112,7 +112,6 @@ Learn Java
    1. [Java JDK 17]( https://www.oracle.com/java/technologies/downloads/#java17 ).
    2. [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
 4. Start learning Java with [Get Started with Java Series](https://www.baeldung.com/get-started-with-java-series).
-See Resources below for more tutorials, books and videos.
 5. Maintain all Java project work in one or more Github repositories as required.
 
 >***Always keep it simple!*** ***And never forget Murphy's law!***
