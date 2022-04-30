@@ -5,12 +5,20 @@ import org.junit.jupiter.api.Test;
 import java.util.Optional;
 
 class OptionalTest {
-    @Test void optionalTest() {
-        var empty = Optional.<Integer>empty();
-        assert(!empty.isPresent());
+    @Test void emptyTest() {
+        var optional = Optional.<Integer>empty();
+        assert(!optional.isPresent());
+    }
 
+    @Test void ofTest() {
         var optional = Optional.of(1);
         assert(optional.isPresent());
         assert(optional.orElse(-1) == 1);
+    }
+
+    @Test void ofNullableTest() {
+        Integer nullable = null;
+        var optional = Optional.ofNullable(nullable);
+        assert(!optional.isPresent());
     }
 }
