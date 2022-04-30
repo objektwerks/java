@@ -11,7 +11,7 @@ class OptionalTest {
         assert(!optional.isPresent());
     }
 
-    @Test void ofTest() {
+    @Test void ofOrElseTest() {
         var optional = Optional.of(1);
         assert(!optional.isEmpty());
         assert(optional.isPresent());
