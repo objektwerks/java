@@ -63,4 +63,9 @@ class IOTest {
             assert(stream.readAllBytes().length > 0);
         }
     }
+
+    @Test void readAllLinesTest() throws IOException {
+        var path = Paths.get("build.gradle.kts");
+        assert(!Files.readAllLines(path).isEmpty());
+    }
 }
