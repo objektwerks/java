@@ -1,9 +1,6 @@
 package objektwerks;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,7 +28,13 @@ class IOTest {
 
     @Test void fileOutputStreamTest() throws IOException {
         try(var fileOutputStream = new FileOutputStream(newFileName())) {
-            fileOutputStream.write("test".getBytes(StandardCharsets.UTF_8));
+            fileOutputStream.write("file output stream test".getBytes(StandardCharsets.UTF_8));
         }
+    }
+
+    @Test void bufferredWriterTest() throws IOException {
+        var writer = new BufferedWriter(new FileWriter(newFileName(), true));
+        writer.append("bufferred writer test");
+        writer.close();
     }
 }
