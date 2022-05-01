@@ -26,6 +26,11 @@ class IOTest {
         assert(newFile.isFile());
     }
 
+    @Test void existsTest() {
+        var path = Paths.get("pom.xml");
+        assert(Files.exists(path));
+    }
+
     @Test void fileOutputInputStreamTest() throws IOException {
         var fileName = newFileName();
         try(var stream = new FileOutputStream(fileName)) {
