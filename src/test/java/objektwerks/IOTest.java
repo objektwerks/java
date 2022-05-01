@@ -33,15 +33,14 @@ class IOTest {
     }
 
     @Test void bufferredWriterTest() throws IOException {
-        var writer = new BufferedWriter(new FileWriter(newFileName(), true));
-        writer.append("bufferred writer test");
-        writer.close();
+        try(var writer = new BufferedWriter(new FileWriter(newFileName(), true))) {
+            writer.append("bufferred writer test");
+        }
     }
 
     @Test void printWriterTest() throws IOException {
-        var fileWriter = new FileWriter(newFileName());
-        var printWriter = new PrintWriter(fileWriter);
-        printWriter.print("print writer test");
-        printWriter.close();
+        try(var printWriter = new PrintWriter(new FileWriter(newFileName()))) {
+            printWriter.print("print writer test");
+        }
     }
 }
