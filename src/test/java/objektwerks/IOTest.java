@@ -41,9 +41,6 @@ class IOTest {
         try(var writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.append("bufferred writer test");
         }
-        try(var reader = new BufferedReader(new FileReader(fileName))) {
-            assert(!reader.readLine().isEmpty());
-        }
         try (var reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
             assert(!reader.readLine().isEmpty());
         }
