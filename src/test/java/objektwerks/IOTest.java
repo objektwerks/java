@@ -37,4 +37,11 @@ class IOTest {
         writer.append("bufferred writer test");
         writer.close();
     }
+
+    @Test void printWriterTest() throws IOException {
+        var fileWriter = new FileWriter(newFileName());
+        var printWriter = new PrintWriter(fileWriter);
+        printWriter.print("print writer test");
+        printWriter.close();
+    }
 }
