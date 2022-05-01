@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
@@ -12,7 +13,11 @@ import org.junit.jupiter.api.Test;
 
 class IOTest {
     String newFileName() {
-        return "./target/" + UUID.randomUUID() + ".txt";
+        return "./target/" + UUID.randomUUID().toString().substring(0, 7) + ".txt";
+    }
+
+    String newDirectoryName() {
+        return "./target/" + UUID.randomUUID().toString().substring(0, 7);
     }
 
     @Test void createNewFileTest() throws IOException {
@@ -31,8 +36,9 @@ class IOTest {
         assert (Files.exists(filePath));
     }
 
-    @Test void isDirectoryTest() {
-        var directoryPath = Paths.get("src");
+    @Test void isDirectoryTest() throws IOException {
+        var newDirectoryPath = Path.of(newDirectoryName());
+        var directoryPath = Files.createDirectory(newDirectoryPath);
         assert(Files.isDirectory(directoryPath));
     }
 
