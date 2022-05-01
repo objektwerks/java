@@ -27,8 +27,13 @@ class IOTest {
     }
 
     @Test void existsTest() {
-        var path = Paths.get("pom.xml");
-        assert(Files.exists(path));
+        var filePath = Paths.get("pom.xml");
+        assert (Files.exists(filePath));
+    }
+
+    @Test void isDirectoryTest() {
+        var directoryPath = Paths.get("src");
+        assert(Files.isDirectory(directoryPath));
     }
 
     @Test void fileOutputInputStreamTest() throws IOException {
