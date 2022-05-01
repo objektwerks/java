@@ -16,8 +16,7 @@ class IOTest {
 
     @Test void createNewFileTest() throws IOException {
         var newFile = new File(newFileName());
-        boolean success = newFile.createNewFile();
-        assert(success);
+        assert(newFile.createNewFile());
     }
 
     @Test void createFile() throws IOException {
