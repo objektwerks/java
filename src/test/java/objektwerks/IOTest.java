@@ -57,4 +57,10 @@ class IOTest {
             assert(!reader.readLine().isEmpty());
         }
     }
+
+    @Test void getResourceAsStreamTest() throws IOException {
+        try(var stream = getClass().getClassLoader().getResourceAsStream("logback-test.xml")) {
+            assert(stream.readAllBytes().length > 0);
+        }
+    }
 }
