@@ -37,6 +37,9 @@ class IOTest {
         try(var writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.append("bufferred writer test");
         }
+        try(var reader = new BufferedReader(new FileReader(fileName))) {
+            assert(!reader.readLine().isEmpty());
+        }
     }
 
     @Test void printWriterTest() throws IOException {
