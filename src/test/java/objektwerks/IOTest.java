@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class IOTest {
     String newFileName() {
-        return "./target/" + UUID.randomUUID().toString() + ".txt";
+        return "./target/" + UUID.randomUUID() + ".txt";
     }
 
     @Test void createNewFileTest() throws IOException {
