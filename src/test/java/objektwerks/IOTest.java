@@ -30,6 +30,9 @@ class IOTest {
         try(var stream = new FileOutputStream(fileName)) {
             stream.write("file output stream test".getBytes(StandardCharsets.UTF_8));
         }
+        try(var stream = new FileInputStream(fileName)) {
+            assert(stream.readAllBytes().length > 0);
+        }
     }
 
     @Test void bufferredWriterTest() throws IOException {
@@ -38,6 +41,9 @@ class IOTest {
             writer.append("bufferred writer test");
         }
         try(var reader = new BufferedReader(new FileReader(fileName))) {
+            assert(!reader.readLine().isEmpty());
+        }
+        try (var reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
             assert(!reader.readLine().isEmpty());
         }
     }
