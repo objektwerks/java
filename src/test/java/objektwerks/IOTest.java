@@ -26,13 +26,15 @@ class IOTest {
     }
 
     @Test void fileOutputStreamTest() throws IOException {
-        try(var stream = new FileOutputStream(newFileName())) {
+        var fileName = newFileName();
+        try(var stream = new FileOutputStream(fileName)) {
             stream.write("file output stream test".getBytes(StandardCharsets.UTF_8));
         }
     }
 
     @Test void bufferredWriterTest() throws IOException {
-        try(var writer = new BufferedWriter(new FileWriter(newFileName(), true))) {
+        var fileName = newFileName();
+        try(var writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.append("bufferred writer test");
         }
     }
