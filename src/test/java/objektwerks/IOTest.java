@@ -25,7 +25,7 @@ class IOTest {
         assert(newFile.isFile());
     }
 
-    @Test void fileOutputStreamTest() throws IOException {
+    @Test void fileOutputInputStreamTest() throws IOException {
         var fileName = newFileName();
         try(var stream = new FileOutputStream(fileName)) {
             stream.write("file output stream test".getBytes(StandardCharsets.UTF_8));
@@ -35,7 +35,7 @@ class IOTest {
         }
     }
 
-    @Test void bufferredWriterTest() throws IOException {
+    @Test void bufferredWriterReaderTest() throws IOException {
         var fileName = newFileName();
         try(var writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.append("bufferred writer test");
@@ -48,7 +48,7 @@ class IOTest {
         }
     }
 
-    @Test void printWriterTest() throws IOException {
+    @Test void printWriterReaderTest() throws IOException {
         var fileName = newFileName();
         try(var writer = new PrintWriter(new FileWriter(fileName))) {
             writer.print("print writer test");
@@ -58,14 +58,14 @@ class IOTest {
         }
     }
 
+    @Test void readAllLinesTest() throws IOException {
+        var path = Paths.get("build.gradle.kts");
+        assert(!Files.readAllLines(path).isEmpty());
+    }
+
     @Test void getResourceAsStreamTest() throws IOException {
         try(var stream = getClass().getClassLoader().getResourceAsStream("logback-test.xml")) {
             assert(stream.readAllBytes().length > 0);
         }
-    }
-
-    @Test void readAllLinesTest() throws IOException {
-        var path = Paths.get("build.gradle.kts");
-        assert(!Files.readAllLines(path).isEmpty());
     }
 }
