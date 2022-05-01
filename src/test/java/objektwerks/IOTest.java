@@ -49,8 +49,12 @@ class IOTest {
     }
 
     @Test void printWriterTest() throws IOException {
-        try(var writer = new PrintWriter(new FileWriter(newFileName()))) {
+        var fileName = newFileName();
+        try(var writer = new PrintWriter(new FileWriter(fileName))) {
             writer.print("print writer test");
+        }
+        try(var reader = new BufferedReader(new FileReader(fileName))) {
+            assert(!reader.readLine().isEmpty());
         }
     }
 }
