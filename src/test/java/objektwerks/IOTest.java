@@ -26,8 +26,8 @@ class IOTest {
     }
 
     @Test void fileOutputStreamTest() throws IOException {
-        try(var fileOutputStream = new FileOutputStream(newFileName())) {
-            fileOutputStream.write("file output stream test".getBytes(StandardCharsets.UTF_8));
+        try(var stream = new FileOutputStream(newFileName())) {
+            stream.write("file output stream test".getBytes(StandardCharsets.UTF_8));
         }
     }
 
@@ -38,8 +38,8 @@ class IOTest {
     }
 
     @Test void printWriterTest() throws IOException {
-        try(var printWriter = new PrintWriter(new FileWriter(newFileName()))) {
-            printWriter.print("print writer test");
+        try(var writer = new PrintWriter(new FileWriter(newFileName()))) {
+            writer.print("print writer test");
         }
     }
 }
