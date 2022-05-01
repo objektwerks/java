@@ -8,9 +8,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 class IOTest {
+    @BeforeAll static void setup() throws IOException {
+        var targetDirectory = Paths.get("./target");
+        if (!Files.exists(targetDirectory)) {
+            var directoryPath = Files.createDirectory(targetDirectory);
+            assert(Files.isDirectory(directoryPath));
+        }
+    }
+
     String newFileName() {
         return "./target/" + UUID.randomUUID().toString().substring(0, 7) + ".txt";
     }
