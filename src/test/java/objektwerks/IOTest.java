@@ -1,6 +1,7 @@
 package objektwerks;
 
 import java.io.*;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -55,6 +56,13 @@ class IOTest {
         }
         try(var reader = new BufferedReader(new FileReader(fileName))) {
             assert(!reader.readLine().isEmpty());
+        }
+    }
+
+    @Test void linesTest() throws URISyntaxException, IOException {
+        var path = Paths.get(getClass().getClassLoader().getResource("logback-test.xml").toURI());
+        try(var stream = Files.lines(path)) {
+            assert(!stream.toList().isEmpty());
         }
     }
 
