@@ -8,7 +8,9 @@ class EqualityTest {
     }
 
     @Test void wrapper() {
-        assert(Integer.valueOf(1) == (Integer.valueOf(1)));
-        assert(Integer.valueOf(1).equals(Integer.valueOf(1)));
+        var x = Integer.valueOf(1);
+        var y = Integer.valueOf(1);
+        assert(x == y); // unboxes integer to int; hence the equality
+        assert(x.equals(y));
     }
 }
