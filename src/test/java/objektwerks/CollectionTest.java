@@ -81,7 +81,7 @@ class CollectionTest {
 
     @Test void arrayListTest() {
         int[] xs = {1, 2, 3};
-        ArrayList<Integer> ys = new ArrayList<>();
+        var ys = new ArrayList<>();
         for (int x : xs) {
           ys.add(x);
         }
