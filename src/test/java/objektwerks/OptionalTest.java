@@ -1,5 +1,6 @@
 package objektwerks;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -65,5 +66,17 @@ class OptionalTest {
 
     @Test void filterTest() {
         assert(Optional.of(2).filter( i -> i % 2 == 0 ).isPresent());
+    }
+
+    @Test void listOfOptionalTest() {
+        var list = Arrays.<Optional<String>>asList(
+            Optional.empty(), Optional.of("a"), Optional.empty(), Optional.of("b"), Optional.empty()
+        );
+        var filteredList = list.stream()
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .toList();
+        assert(list.size() == 5);
+        assert(filteredList.size() == 2);
     }
 }
