@@ -36,15 +36,16 @@ class Person implements Comparable<Person> {  // old school class, not a record
 }
 
 class EqualityTest {
-    @Test void primitive() {
+    @Test void primitiveTest() {
         assert(1 == 1);
     }
 
-    @Test void wrapper() {
+    @Test void wrapperTest() {
         var x = Integer.valueOf(1);
         var y = Integer.valueOf(1);
 
-        // the jvm cached x and reused it for y via Integer.valueOf; hence the structural equality
+        // the jvm cached x and reused it for y via Integer.valueOf;
+        // hence the structural equality via a reference equality == check
         assert(x == y);
 
         // structural equality via equals
@@ -66,12 +67,13 @@ class EqualityTest {
     @Test void comparatorTest() {
         var fred = new Person("fred", "flintstone");
         var barney = new Person("barney", "rebel");
+
         var persons = List.of(fred, barney);
-        var sortedPersons = persons.stream().sorted();
-        assert(sortedPersons.toList().get(0).equals(fred));
+        var sortedPersons = persons.stream().sorted().toList();
+        assert(sortedPersons.get(0).equals(fred));
 
         var byFirstComparator = Comparator.comparing(Person::first);
-        var sortedPersonsByComparator = persons.stream().sorted(byFirstComparator);
-        assert(sortedPersonsByComparator.toList().get(0).equals(barney));
+        var sortedPersonsByComparator = persons.stream().sorted(byFirstComparator).toList();
+        assert(sortedPersonsByComparator.get(0).equals(barney));
     }
 }
