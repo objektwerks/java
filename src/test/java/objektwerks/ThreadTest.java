@@ -10,13 +10,10 @@ class ThreadTest {
     @Test void threadTest() throws InterruptedException {
         var counter = new AtomicInteger(0);
         Thread thread = new Thread(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        counter.set(1);
-                        assert(counter.get() == 1);
-                    }
-                });
+            () -> {
+                counter.set(1);
+                assert(counter.get() == 1);
+            });
         thread.start();
         thread.join();
     }
@@ -64,10 +61,10 @@ class ThreadTest {
         var counter = new AtomicInteger(0);
         var executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
         Future<Integer> future = executor.submit(
-                () -> {
-                    counter.set(1);
-                    return Integer.valueOf(counter.get());
-                }
+            () -> {
+                counter.set(1);
+                return Integer.valueOf(counter.get());
+            }
         );
         var result = future.get(100, TimeUnit.MILLISECONDS);
         assertEquals(Integer.valueOf(1), result);
