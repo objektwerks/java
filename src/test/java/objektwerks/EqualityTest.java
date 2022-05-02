@@ -55,10 +55,10 @@ class EqualityTest {
         var y = Integer.valueOf(1);
 
         // the jvm cached x and reused it for y via Integer.valueOf;
-        // hence the structural equality via a reference equality == check
+        // hence the structural equality via a reference equality == test
         assert(x == y);
 
-        // structural equality via equals
+        // structural equality test via equals
         assert(x.equals(y));
     }
 
