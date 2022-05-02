@@ -2,6 +2,7 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,6 +13,14 @@ class Person implements Comparable<Person> {  // old school class, not a record
     public Person(String first, String last) {
         this.first = first;
         this.last = last;
+    }
+
+    public String first() {
+        return first;
+    }
+
+    public String last() {
+        return last;
     }
 
     @Override public boolean equals(Object other) {
@@ -34,17 +43,12 @@ class EqualityTest {
     @Test void wrapper() {
         var x = Integer.valueOf(1);
         var y = Integer.valueOf(1);
-        var z = new Integer(1);
 
         // the jvm cached x and reused it for y via Integer.valueOf; hence the structural equality
         assert(x == y);
 
-        // x and z are tested for reference (or memory location) equality; hence the inequality
-        assert(x != z);
-
         // structural equality via equals
         assert(x.equals(y));
-        assert(x.equals(z));
     }
 
     @Test void objectsTest() {
@@ -65,5 +69,9 @@ class EqualityTest {
         var persons = List.of(fred, barney);
         var sortedPersons = persons.stream().sorted();
         assert(sortedPersons.toList().get(0).equals(fred));
+
+        var byFirstComparator = Comparator.comparing(Person::first);
+        var sortedPersonsByComparator = persons.stream().sorted(byFirstComparator);
+        assert(sortedPersonsByComparator.toList().get(0).equals(barney));
     }
 }
