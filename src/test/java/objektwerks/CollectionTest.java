@@ -86,6 +86,7 @@ class CollectionTest {
           ys.add(x);
         }
         assert(ys.size() == 3);
+        assert(ys.get(0).equals(1));
         assert(ys.contains(3));
         assert(ys.indexOf(1) == 0);
     }
