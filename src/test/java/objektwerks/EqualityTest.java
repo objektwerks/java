@@ -2,6 +2,7 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Objects;
 
 class Person implements Comparable<Person> {  // old school class, not a record
@@ -56,5 +57,13 @@ class EqualityTest {
         assert(Objects.deepEquals(fred, fredCopy));
 
         assert(!fred.equals(barney));
+    }
+
+    @Test void comparatorTest() {
+        var fred = new Person("fred", "flintstone");
+        var barney = new Person("barney", "rebel");
+        var persons = List.of(fred, barney);
+        var sortedPersons = persons.stream().sorted();
+        assert(sortedPersons.toList().get(0).equals(fred));
     }
 }
