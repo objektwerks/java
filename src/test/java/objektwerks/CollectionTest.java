@@ -95,6 +95,8 @@ class CollectionTest {
         var immutableList = List.of(1, 2, 3);
         assert(immutableList.size() == 3);
         assert(immutableList.get(0) == 1);
+        assert(immutableList.contains(3));
+        assert(immutableList.indexOf(1) == 0);
     }
 
     @Test void mutableListTest() {
