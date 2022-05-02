@@ -106,6 +106,9 @@ class CollectionTest {
         mutableList.add(3);
         assert(mutableList.add(4));
         assert(mutableList.remove(3) == 4);
+        assert(mutableList.get(0) == 1);
+        assert(mutableList.contains(3));
+        assert(mutableList.indexOf(1) == 0);
     }
 
     @Test void setTest() {
