@@ -2,6 +2,8 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 class ForTest {
     @Test void forTest() {
         int[] xs = {1, 2, 3};
@@ -19,5 +21,13 @@ class ForTest {
             sum += x;
         }
         assert(sum == 6);
+    }
+
+    @Test void iteratorTest() {
+        var xs = List.of(1, 2, 3);
+        var iterator = xs.iterator();
+        while (iterator.hasNext()) {
+            assert(iterator.next() > 0);
+        }
     }
 }
