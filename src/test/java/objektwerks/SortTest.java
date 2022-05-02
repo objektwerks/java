@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-// See EqualityTest for Person class.
 class SortTest {
     @Test void comparableSortTest() {
         var fred = new Person("fred", "flintstone");
