@@ -1,6 +1,5 @@
 package objektwerks;
 
-import java.sql.Time;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
