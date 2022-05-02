@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-class ForTest {
+class LoopTest {
     @Test void forTest() {
         int[] xs = {1, 2, 3};
         int sum = 0;
