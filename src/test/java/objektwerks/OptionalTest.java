@@ -72,11 +72,10 @@ class OptionalTest {
         var list = Arrays.<Optional<String>>asList(
             Optional.empty(), Optional.of("a"), Optional.empty(), Optional.of("b"), Optional.empty()
         );
-        var filteredList = list.stream()
+        var concatenated = list.stream()
             .filter(Optional::isPresent)
             .map(Optional::get)
-            .toList();
-        assert(list.size() == 5);
-        assert(filteredList.size() == 2);
+            .reduce(String::concat);
+        assert(concatenated.orElse("").equals("ab"));
     }
 }
