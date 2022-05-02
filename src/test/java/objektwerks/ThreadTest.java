@@ -69,4 +69,16 @@ class ThreadTest {
         var result = future.get(100, TimeUnit.MILLISECONDS);
         assertEquals(Integer.valueOf(1), result);
     }
+
+    @Test void completableFutureTest() throws InterruptedException, ExecutionException {
+        var future = CompletableFuture.supplyAsync(() -> "Hello, future!");
+        assertEquals("Hello, future!", future.get());
+    }
+
+    @Test void composeFuturesTest() throws ExecutionException, InterruptedException {
+        var future = CompletableFuture
+                .supplyAsync(() -> "Hello")
+                .thenCompose(hello -> CompletableFuture.supplyAsync(() -> hello + ", future!"));
+        assertEquals("Hello, future!", future.get());
+    }
 }
