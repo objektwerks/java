@@ -20,12 +20,25 @@ class ThreadTest {
 
     @Test void executorServiceTest() throws ExecutionException, InterruptedException, TimeoutException {
         var counter = new AtomicInteger(0);
-        var executorService = Executors.newFixedThreadPool(2);
-        Future<Integer> future = executorService.submit(
+        var executor = Executors.newFixedThreadPool(2);
+        Future<Integer> future = executor.submit(
             () -> {
                 counter.set(1);
                 return Integer.valueOf(counter.get());
             }
+        );
+        var result = future.get(100, TimeUnit.MILLISECONDS);
+        assertEquals(Integer.valueOf(1), result);
+    }
+
+    @Test void threadPoolExecutorTest() throws ExecutionException, InterruptedException, TimeoutException {
+        var counter = new AtomicInteger(0);
+        var executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
+        Future<Integer> future = executor.submit(
+                () -> {
+                    counter.set(1);
+                    return Integer.valueOf(counter.get());
+                }
         );
         var result = future.get(100, TimeUnit.MILLISECONDS);
         assertEquals(Integer.valueOf(1), result);
