@@ -2,11 +2,11 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
-class Person {
+class Caveman {
     String name;
     Integer age;
 
-    Person(String name, Integer age) {
+    Caveman(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
@@ -38,9 +38,9 @@ class Dog extends Canine {
 
 class ClassTest {
     @Test void classTest() {
-        var person = new Person("Fred Flintstone", 25);
-        assert(person.name.equals("Fred Flintstone"));
-        assert(person.age == 25);
+        var caveman = new Caveman("Fred Flintstone", 25);
+        assert(caveman.name.equals("Fred Flintstone"));
+        assert(caveman.age == 25);
     }
 
     @Test void inheritenceTest() {
