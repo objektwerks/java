@@ -38,4 +38,12 @@ class LoopTest {
             assert(i > 0);
         }
     }
+
+    @Test void doWhileTest() {
+        int i = 0;
+        do {
+            i++;
+            assert(i > 0);
+        } while (i < 10);
+    }
 }
