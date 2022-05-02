@@ -7,9 +7,9 @@ Java
 * datetime
 * enums
 * futures
-* loops
 * generics
 * logging
+* loops
 * math
 * optional
 * pattern matching
