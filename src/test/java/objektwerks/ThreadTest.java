@@ -1,5 +1,6 @@
 package objektwerks;
 
+import java.sql.Time;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,6 +29,21 @@ class ThreadTest {
             }
         );
         var result = future.get(100, TimeUnit.MILLISECONDS);
+        assertEquals(Integer.valueOf(1), result);
+    }
+
+    @Test void scheduledExecutorServiceTest() throws ExecutionException, InterruptedException, TimeoutException {
+        var counter = new AtomicInteger(0);
+        var executor = Executors.newScheduledThreadPool(2);
+        Future<Integer> future = executor.schedule(
+            () -> {
+                counter.set(1);
+                return Integer.valueOf(counter.get());
+            },
+            100,
+            TimeUnit.MILLISECONDS
+        );
+        var result = future.get(300, TimeUnit.MILLISECONDS);
         assertEquals(Integer.valueOf(1), result);
     }
 
