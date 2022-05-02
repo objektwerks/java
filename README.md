@@ -17,14 +17,15 @@ Java
 * records
 * recursion
 * streams
+* threads
 * text blocks
 * variables
 * varargs
 >And quite possibly a few more features.:)
 
-Java-X
-------
->See this [project](https://github.com/objektwerks/java.x) for somewhat dated yet useful work on:
+Java X Project
+--------------
+>See [Java X Project](https://github.com/objektwerks/java.x) for some dated yet useful work on:
 1. aop ( aspect-oriented-programming )
 2. hibernate ( object-relational mapping )
 3. models ( homeschool, beer )
@@ -34,6 +35,10 @@ Java-X
 7. quartz ( scheduling )
 8. xml ( structured markup language )
 9. spring ( dependency injection framework and more )
+
+Swing Project
+-------------
+>Also see [Swing Project](https://github.com/objektwerks/swing) for Java2D and Swing work.
 
 New Features ( JDK 8 to JDK 18 )
 --------------------------------
