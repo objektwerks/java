@@ -14,7 +14,7 @@ class LoopTest {
         assert(sum == 6);
     }
 
-    @Test void forEachTest() {
+    @Test void enhancedForTest() {
         int[] xs = {1, 2, 3};
         int sum = 0;
         for (int x : xs) {  
