@@ -1,12 +1,22 @@
 package objektwerks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
 class SortTest {
+    @Test void arraysSortTest() {
+        int[] xs = {3, 2, 1};
+        int[] ys = {1, 2, 3};
+
+        assert(!Arrays.equals(xs, ys));
+        Arrays.sort(xs);
+        assert(Arrays.equals(xs, ys));
+    }
+
     @Test void comparableSortTest() {
         var fred = new Person("fred", "flintstone");
         var barney = new Person("barney", "rubble");
