@@ -2,9 +2,6 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Objects;
 
 class Person implements Comparable<Person> {  // old school class, not a record
@@ -24,6 +21,10 @@ class Person implements Comparable<Person> {  // old school class, not a record
         return last;
     }
 
+    @Override public int hashCode() {
+        return first.hashCode() + last.hashCode();
+    }
+
     @Override public boolean equals(Object other) {
         if (this == other) return true;
         if (other == null || getClass() != other.getClass()) return false;
@@ -33,6 +34,14 @@ class Person implements Comparable<Person> {  // old school class, not a record
 
     @Override public int compareTo(Person other) {
         return this.last.compareTo(other.last);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                '}';
     }
 }
 
@@ -63,36 +72,5 @@ class EqualityTest {
         assert(Objects.deepEquals(fred, fredCopy));
 
         assert(!fred.equals(barney));
-    }
-
-    @Test void comparableSortTest() {
-        var fred = new Person("fred", "flintstone");
-        var barney = new Person("barney", "rebel");
-
-        var persons = List.of(fred, barney);
-        var sortedPersons = persons.stream().sorted().toList();
-        assert(sortedPersons.get(0).equals(fred));
-    }
-
-    @Test void comparatorSortTest() {
-        var fred = new Person("fred", "flintstone");
-        var barney = new Person("barney", "rebel");
-
-        var persons = List.of(fred, barney);
-        var byFirstComparator = Comparator.comparing(Person::first);
-        var sortedPersonsByComparator = persons.stream().sorted(byFirstComparator).toList();
-        assert(sortedPersonsByComparator.get(0).equals(barney));
-    }
-
-    @Test void lambdaSortTest() {
-        var wilma = new Person("wilma", "flintstone");
-        var betty = new Person("betty", "rebel");
-
-        var persons = new ArrayList<Person>();
-        persons.add(wilma);
-        persons.add(betty);
-
-        persons.sort( (p1, p2) -> p1.last().compareTo(p2.last()) );
-        assert(persons.get(0).equals(wilma));
     }
 }
