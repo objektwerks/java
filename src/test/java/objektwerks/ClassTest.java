@@ -52,4 +52,13 @@ class ClassTest {
         var dog = new Dog();
         assert(dog.behavior().equals("friendly"));
     }
+
+    @Test void anonymousClassTest() {
+        var anonymous = new Behavior() {
+            @Override public String behavior() {
+                return "anonymous";
+            }
+        };
+        assert(anonymous.behavior().equals("anonymous"));
+    }
 }
