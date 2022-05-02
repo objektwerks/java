@@ -52,4 +52,14 @@ class DateTimeTest {
         assert(!newYorkZDT.isBefore(berlinZDT));
         assert(newYorkZDT.isEqual(berlinZDT));
     }
+
+    @Test void periodTest() {
+        LocalDate startDate = LocalDate.of(2015, 2, 20);
+        LocalDate endDate = LocalDate.of(2017, 1, 15);
+        Period period = Period.between(startDate, endDate);
+        assert("P1Y10M26D".equals(period.toString()));
+        assert(period.getYears() == 1);
+        assert(period.getMonths() == 10);
+        assert(period.getDays() == 26);
+    }
 }
