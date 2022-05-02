@@ -30,4 +30,12 @@ class LoopTest {
             assert(iterator.next() > 0);
         }
     }
+
+    @Test void whileTest() {
+        int i = 0;
+        while (i < 10) {
+            i++;
+            assert(i > 0);
+        }
+    }
 }
