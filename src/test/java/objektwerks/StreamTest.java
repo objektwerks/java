@@ -30,7 +30,7 @@ class StreamTest {
 		assert(list.equals(List.of(2, 4)));
 	}
 
-	@Test void listTest() {
+	@Test void toListTest() {
 		var list = Stream
 				.of(1, 2, 3)
 				.map(i -> i * i * i)
