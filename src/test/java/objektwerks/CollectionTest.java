@@ -86,6 +86,8 @@ class CollectionTest {
           ys.add(x);
         }
         assert(ys.size() == 3);
+        assert(ys.contains(3));
+        assert(ys.indexOf(1) == 0);
     }
 
     @Test void immutableListTest() {
