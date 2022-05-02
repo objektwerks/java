@@ -13,14 +13,14 @@ class LoggerTest {
         logger.info("*** Test logging is working!");
     }
 
-    @Test void random() {
+    @Test void logTest() {
         var random = new Random();
         var optional = Stream
             .of(1, 11)
             .map( i -> random.nextInt() )
             .reduce(Integer::sum);
         int sum = optional.orElse(-1);
-        logger.info("Random sum of 10 random numbers: " + sum);
         assert(sum != -1 && sum != 0);
+        logger.info("Random sum of 10 random numbers: " + sum);
     }
 }
