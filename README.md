@@ -9,6 +9,7 @@ Java
 * futures
 * for iterators
 * generics
+* logging
 * math
 * optional
 * pattern matching
