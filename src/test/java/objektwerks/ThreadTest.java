@@ -7,6 +7,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ThreadTest {
+    @Test void threadTest() throws InterruptedException {
+        var counter = new AtomicInteger(0);
+        Thread thread = new Thread(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        counter.set(1);
+                        assert(counter.get() == 1);
+                    }
+                });
+        thread.start();
+        thread.join();
+    }
+
     @Test void executorTest() {
         var counter = new AtomicInteger(0);
         Executor executor = Executors.newSingleThreadExecutor();
