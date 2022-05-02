@@ -1,10 +1,10 @@
 package objektwerks;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ThreadTest {
     @Test void executorTest() {
@@ -16,5 +16,18 @@ class ThreadTest {
                 assert(counter.get() == 1);
             }
         );
+    }
+
+    @Test void executorServiceTest() throws ExecutionException, InterruptedException, TimeoutException {
+        var counter = new AtomicInteger(0);
+        var executorService = Executors.newFixedThreadPool(2);
+        Future<Integer> future = executorService.submit(
+            () -> {
+                counter.set(1);
+                return Integer.valueOf(counter.get());
+            }
+        );
+        var result = future.get(100, TimeUnit.MILLISECONDS);
+        assertEquals(Integer.valueOf(1), result);
     }
 }
