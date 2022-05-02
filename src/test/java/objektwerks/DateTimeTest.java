@@ -54,12 +54,18 @@ class DateTimeTest {
     }
 
     @Test void periodTest() {
-        LocalDate startDate = LocalDate.of(2015, 2, 20);
-        LocalDate endDate = LocalDate.of(2017, 1, 15);
-        Period period = Period.between(startDate, endDate);
+        var start = LocalDate.of(2015, 2, 20);
+        var end = LocalDate.of(2017, 1, 15);
+        var period = Period.between(start, end);
         assert("P1Y10M26D".equals(period.toString()));
         assert(period.getYears() == 1);
         assert(period.getMonths() == 10);
         assert(period.getDays() == 26);
+    }
+
+    @Test void durationTest() {
+        var start = LocalTime.of(1, 20, 25, 1024);
+        var end = LocalTime.of(3, 22, 27, 1544);
+        assert(Duration.between(start, end).getSeconds() == 7322);
     }
 }
