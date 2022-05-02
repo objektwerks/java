@@ -2,6 +2,8 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 class Person {  // old school class, not a record
     private final String first;
     private final String last;
@@ -40,10 +42,15 @@ class EqualityTest {
         assert(x.equals(z));
     }
 
-    @Test void objectTest() {
+    @Test void objectsTest() {
         var fred = new Person("fred", "flintstone");
+        var fredCopy = new Person("fred", "flintstone");
         var barney = new Person("barney", "rebel");
+
+        assert(fred.equals(fredCopy));
+        assert(Objects.equals(fred, fredCopy));
+        assert(Objects.deepEquals(fred, fredCopy));
+
         assert(!fred.equals(barney));
-        assert(fred.equals(new Person("fred", "flintstone")));
     }
 }
