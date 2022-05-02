@@ -1,10 +1,10 @@
 package objektwerks;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Objects;
 
-class Person implements Comparable<Person> {  // old school class, not a record
+import org.junit.jupiter.api.Test;
+
+class Person implements Comparable<Person> {
     private final String first;
     private final String last;
 
