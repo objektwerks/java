@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -12,8 +13,7 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 
 class StreamTest {
-    @Test
-    void arrayTest() {
+    @Test void arrayTest() {
         int[] array = {1, 2, 3};
         var optional = Arrays
 			.stream(array)
@@ -22,8 +22,7 @@ class StreamTest {
         assert (optional.orElse(-1) == 14);
     }
 
-    @Test
-    void collectTest() {
+    @Test void collectTest() {
         var list = Stream
 			.of(1, 2, 3)
 			.map(i -> i + 1)
@@ -32,8 +31,7 @@ class StreamTest {
         assert (list.equals(List.of(2, 4)));
     }
 
-    @Test
-    void toListTest() {
+    @Test void toListTest() {
         var list = Stream
 			.of(1, 2, 3)
 			.map(i -> i * i * i)
@@ -43,8 +41,7 @@ class StreamTest {
         assert (list.equals(List.of(1, 27)));
     }
 
-    @Test
-    void reduceTest() {
+    @Test void reduceTest() {
         var optional = Stream
 			.of(1, 2, 3)
 			.map(i -> i * i)
@@ -52,8 +49,7 @@ class StreamTest {
         assert (optional.orElse(-1) == 14);
     }
 
-    @Test
-    void takeWhileTest() {
+    @Test void takeWhileTest() {
         var list = Stream
 			.of(1, 2, 3)
 			.takeWhile(i -> i % 2 != 0)
@@ -61,8 +57,7 @@ class StreamTest {
         assert (list.equals(List.of(1)));
     }
 
-    @Test
-    void dropWhileTest() {
+    @Test void dropWhileTest() {
         var list = Stream
 			.of(1, 2, 3)
 			.dropWhile(i -> i % 2 != 0)
@@ -70,8 +65,7 @@ class StreamTest {
         assert (list.equals(List.of(2, 3)));
     }
 
-    @Test
-    void skipTest() {
+    @Test void skipTest() {
         var count = Stream
 			.of(1, 2, 3)
 			.skip(2)
@@ -79,21 +73,31 @@ class StreamTest {
         assert (count == 1);
     }
 
-    @Test
-    void fileTest() throws IOException {
+    @Test void fileTest() throws IOException {
         var path = Paths.get("./LICENSE");
         try (var lines = Files.lines(path)) {
             assert (lines.count() == 201);
         }
     }
 
-    @Test
-    void parallelTest() {
+    @Test void parallelTest() {
         var optional = IntStream
 			.range(1, 1000001)
 			.parallel()
 			.map(i -> i + 1)
 			.reduce(Integer::sum);
         assert (optional.orElse(-1) == 1785293664);
+    }
+
+    @Test void listOfOptionalTest() {
+        var list = Arrays.<Optional<Integer>>asList(
+                Optional.empty(), Optional.of(1), Optional.empty(), Optional.of(2), Optional.empty()
+        );
+        var filteredList = list.stream()
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .toList();
+        assert(list.size() == 5);
+        assert(filteredList.size() == 2);
     }
 }
