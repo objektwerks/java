@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 
 public class App {
     private static final Logger logger = LoggerFactory.getLogger(App.class);
-    private static final String url = "http://api.icndb.com/jokes/random/";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         String name = args.length > 0 ? args[0] : "Java geek";
@@ -30,15 +29,15 @@ public class App {
 
         var request = HttpRequest.newBuilder()
             .GET()
-            .uri(URI.create(url))
+            .uri(URI.create("http://api.icndb.com/jokes/random/"))
             .build();
 
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
         var statusCode = response.statusCode();
         var text = response.body();
 
-        System.out.println(statusCode);
-        System.out.println(text);
+        System.out.println("status code: " + statusCode);
+        System.out.println("text:\n" + text);
 
         logger.info(prefix + "status code: " + statusCode);
         logger.info(prefix + "text:\n" + text);
