@@ -2,6 +2,7 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -64,7 +65,7 @@ class EqualityTest {
         assert(!fred.equals(barney));
     }
 
-    @Test void comparatorTest() {
+    @Test void comparatorSortTest() {
         var fred = new Person("fred", "flintstone");
         var barney = new Person("barney", "rebel");
 
@@ -75,5 +76,17 @@ class EqualityTest {
         var byFirstComparator = Comparator.comparing(Person::first);
         var sortedPersonsByComparator = persons.stream().sorted(byFirstComparator).toList();
         assert(sortedPersonsByComparator.get(0).equals(barney));
+    }
+
+    @Test void lambdaSortTest() {
+        var wilma = new Person("wilma", "flintstone");
+        var betty = new Person("betty", "rebel");
+
+        var persons = new ArrayList<Person>();
+        persons.add(wilma);
+        persons.add(betty);
+
+        persons.sort( (p1, p2) -> p1.last().compareTo(p2.last()) );
+        assert(persons.get(0).equals(wilma));
     }
 }
