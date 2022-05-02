@@ -93,11 +93,10 @@ class StreamTest {
         var list = Arrays.<Optional<Integer>>asList(
                 Optional.empty(), Optional.of(1), Optional.empty(), Optional.of(2), Optional.empty()
         );
-        var filteredList = list.stream()
+        var sum = list.stream()
             .filter(Optional::isPresent)
             .map(Optional::get)
-            .toList();
-        assert(list.size() == 5);
-        assert(filteredList.size() == 2);
+            .reduce(Integer::sum);
+        assert(sum.orElse(-1) == 3);
     }
 }
