@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Objects;
 
-class Person {  // old school class, not a record
+class Person implements Comparable<Person> {  // old school class, not a record
     private final String first;
     private final String last;
 
@@ -13,11 +13,15 @@ class Person {  // old school class, not a record
         this.last = last;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person that = (Person) o;
+    @Override public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Person that = (Person) other;
         return first.equals(that.first) && last.equals(that.last);
+    }
+
+    @Override public int compareTo(Person other) {
+        return this.last.compareTo(other.last);
     }
 }
 
