@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class SortTest {
     @Test void comparableSortTest() {
         var fred = new Person("fred", "flintstone");
-        var barney = new Person("barney", "rebel");
+        var barney = new Person("barney", "rubble");
 
         var persons = List.of(fred, barney);
         var sortedPersons = persons.stream().sorted().toList();
@@ -18,18 +18,18 @@ class SortTest {
     }
 
     @Test void comparatorSortTest() {
-        var fred = new Person("fred", "flintstone");
-        var barney = new Person("barney", "rebel");
+        var pebbles = new Person("pebbles", "flintstone");
+        var bammbamm = new Person("bamm-bamm", "rubble");
 
-        var persons = List.of(fred, barney);
+        var persons = List.of(pebbles, bammbamm);
         var byFirstComparator = Comparator.comparing(Person::first);
         var sortedPersonsByComparator = persons.stream().sorted(byFirstComparator).toList();
-        assert(sortedPersonsByComparator.get(0).equals(barney));
+        assert(sortedPersonsByComparator.get(0).equals(bammbamm));
     }
 
     @Test void lambdaSortTest() {
         var wilma = new Person("wilma", "flintstone");
-        var betty = new Person("betty", "rebel");
+        var betty = new Person("betty", "rubble");
 
         var persons = new ArrayList<Person>();
         persons.add(wilma);
