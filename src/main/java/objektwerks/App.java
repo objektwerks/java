@@ -36,10 +36,10 @@ public class App {
         var statusCode = response.statusCode();
         var text = response.body();
 
-        System.out.println("status code: " + statusCode);
-        System.out.println("text:\n" + text);
+        System.out.println(prefix + "http status code: " + statusCode);
+        System.out.println(prefix + "http response text:\n" + text);
 
-        logger.info(prefix + "status code: " + statusCode);
-        logger.info(prefix + "text:\n" + text);
+        logger.info(prefix + "http status code: " + statusCode);
+        logger.info(prefix + "http response text:\n" + text);
     }
 }
