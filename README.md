@@ -8,6 +8,7 @@ Java
 * enums
 * futures
 * generics
+* http client
 * logging
 * loops
 * math
