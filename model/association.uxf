@@ -1,21 +1,5 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;130&lt;/x&gt;&lt;y&gt;220&lt;/y&gt;&lt;w&gt;130&lt;/w&gt;&lt;h&gt;30&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;110;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>50</x><y>40</y><w>100</w><h>130</h></coordinates><panel_attributes>Person
---
-id
-name
-age
---
-id()
-name()
-age()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>40</y><w>100</w><h>130</h></coordinates><panel_attributes>Task
---
-personId
-task
-completed
---
-do()
-task()
-completed()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>80</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=-
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;130&lt;/x&gt;&lt;y&gt;220&lt;/y&gt;&lt;w&gt;130&lt;/w&gt;&lt;h&gt;30&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;110;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>50</x><y>40</y><w>100</w><h>40</h></coordinates><panel_attributes>Teacher</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>40</y><w>100</w><h>40</h></coordinates><panel_attributes>Student
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>40</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1
-completes &gt;</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element></diagram>
+teaches &gt;</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element></diagram>
