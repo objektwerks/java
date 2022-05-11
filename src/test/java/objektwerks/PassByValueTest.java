@@ -8,8 +8,13 @@ import org.junit.jupiter.api.Test;
  * 2. For Object types, the object reference is pass-by-value.
  */
 class PassByValueTest {
-    @Test void primitiveTest() {
+    int square(int i) {
+        return i * i; // returns new primitive by value
+    }
 
+    @Test void primitiveTest() {
+        int i = 2;
+        assert(square(i) == 4);
     }
 
     @Test void objectTest() {
