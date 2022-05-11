@@ -5,6 +5,7 @@ Java
 * collections
 * control flow
 * datetime
+* exceptions
 * enums
 * futures
 * generics
