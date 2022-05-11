@@ -19,6 +19,14 @@ enum Level {
     }
 }
 
+enum Singleton {
+    INSTANCE;
+
+    int square(int i) {
+        return i * i;
+    }
+}
+
 class EnumTest {
     @Test void enumTest() {
         var high = Level.high;
@@ -52,5 +60,9 @@ class EnumTest {
         assert(enumMap.get(Level.high) == 1);
         assert(enumMap.get(Level.medium) == 2);
         assert(enumMap.get(Level.low) == 3);
+    }
+
+    @Test void singletonTest() {
+        assert(Singleton.INSTANCE.square(2) == 4);
     }
 }
