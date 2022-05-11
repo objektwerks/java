@@ -135,6 +135,11 @@ IDEs
 
 UML
 ---
+>A lot of UML tutorials exist.
+1. [Basics](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)
+
+UML Editor
+----------
 >Multiple open source and commerical UML editors exist.
 1. [Umlet](https://www.umlet.com/)
 
