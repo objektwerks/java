@@ -1,12 +1,11 @@
 package objektwerks;
 
-import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
 
 class ExceptionTest {
     @Test void checkedTest() {
@@ -22,5 +21,15 @@ class ExceptionTest {
             var i = Integer.parseInt("one");
             assert(i == 1);
         });
+    }
+
+    @Test void tryCatchTest() {
+        var i = 0;
+        try {
+            i = Integer.parseInt("one");
+        } catch (NumberFormatException exception) {
+            i = -1;
+        }
+        assert(i == -1);
     }
 }
