@@ -58,4 +58,18 @@ class ControlFlowTest {
       assert(x != 0);
       assert(x > 0 || x < 2);
     }
+
+    @Test void shortCircuitTest() {
+        boolean a = true;
+        boolean b = true;
+        boolean c = false;
+        boolean result = false;
+
+        if (a || b || c) { // stops evaluating true test at 'a'
+            result = true;
+        } else {
+            result = false;
+        }
+        assert(result);
+    }
 }
