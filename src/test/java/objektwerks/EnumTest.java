@@ -20,7 +20,7 @@ enum Level {
 }
 
 enum Singleton {
-    INSTANCE;
+    instance;
 
     int square(int i) {
         return i * i;
@@ -63,6 +63,6 @@ class EnumTest {
     }
 
     @Test void singletonTest() {
-        assert(Singleton.INSTANCE.square(2) == 4);
+        assert(Singleton.instance.square(2) == 4);
     }
 }
