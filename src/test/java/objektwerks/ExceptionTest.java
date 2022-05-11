@@ -3,9 +3,16 @@ package objektwerks;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
+
+class CustomException extends Exception {
+    CustomException(String message) {
+        super(message);
+    }
+}
 
 class ExceptionTest {
     @Test void checkedTest() {
@@ -31,5 +38,11 @@ class ExceptionTest {
             i = -1;
         }
         assert(i == -1);
+    }
+
+    @Test void customTest() {
+        assertThrows(CustomException.class, () -> {
+            if (new Random().nextInt() != 0) throw new CustomException("int != 0");
+        });
     }
 }
