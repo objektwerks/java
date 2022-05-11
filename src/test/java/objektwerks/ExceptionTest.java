@@ -14,6 +14,9 @@ class CustomException extends Exception {
     }
 }
 
+/**
+ * See <a href="https://www.baeldung.com/java-exceptions">Java Exceptions</a>
+ */
 class ExceptionTest {
     @Test void checkedTest() {
         assertThrows(IOException.class, () -> {
