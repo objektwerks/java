@@ -1,0 +1,18 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>30</y><w>100</w><h>130</h></coordinates><panel_attributes>Person
+--
+id
+name
+age
+--
+id()
+name()
+age()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>30</y><w>100</w><h>130</h></coordinates><panel_attributes>Task
+--
+personId
+task
+completed
+--
+do()
+task()
+completed()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>80</y><w>230</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element></diagram>
