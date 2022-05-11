@@ -19,6 +19,7 @@ Java
 * random
 * records
 * recursion
+* singleton
 * streams
 * threads
 * text blocks
