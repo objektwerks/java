@@ -132,6 +132,11 @@ IDEs
 2. [Visual Studio (VS) Code]( https://code.visualstudio.com/download ).
 3. [Netbeans](https://netbeans.apache.org/)
 
+UML
+---
+>Multiple open source and commerical UML editors exist.
+1. [Umlet](https://www.umlet.com/)
+
 Resources
 ---------
 1. [Baeldung](https://www.baeldung.com/)
