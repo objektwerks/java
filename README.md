@@ -76,7 +76,7 @@ VS Code Settings
 >Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
 ```
    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
-   "java.jdt.ls.vmargs": "--release 19 --enable-preview",
+   "java.jdt.ls.vmargs": "--release 19 --enable-preview -add-modules jdk.incubator.concurrent",
    "java.configuration.runtimes": [
       {
          "name": "JavaSE-19",
@@ -86,7 +86,7 @@ VS Code Settings
    ],
 ```
 >These settings are supposed to ensure JDK 19 preview features are **enabled**!
->**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 19 --enable-preview"```
+>**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 19 --enable-preview -add-modules jdk.incubator.concurrent"```
 >fundamentally disables Java support in VS Code.
 
 Learn Java
