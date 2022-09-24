@@ -27,56 +27,6 @@ Java
 * varargs
 >And quite possibly a few more features.:)
 
-Java X Project
---------------
->See [Java X Project](https://github.com/objektwerks/java.x) for some dated yet useful work on:
-1. aop ( aspect-oriented-programming )
-2. hibernate ( object-relational mapping )
-3. models ( homeschool, beer )
-4. jaxb ( java <-> xml binding )
-5. jms ( messaging )
-6. jpa ( object-relational mapping )
-7. quartz ( scheduling )
-8. xml ( structured markup language )
-9. spring ( dependency injection framework and more )
-
-Swing Project
--------------
->Also see [Swing Project](https://github.com/objektwerks/swing) for Java2D and Swing work.
-
-Preview Features
-----------------
->Status of build tools and IDEs vis-a-vis JDK 19 **preview features**:
-1. Maven **does** understand; unit tests **pass**.
-2. Gradle **does not** understand; and unit tests **fail**.
-3. Intellij **does** understand; yet unit tests **fail** since it defaults to Gradle. 
-   1. **Solution:** Configure Intellij to run tests using Intellij and Maven.
-4. VS Code **does not** understand. See **VS Code Settings** section below!
->See maven and gradle build files for details:
-1. pom.xml
-2. build.gradle.kts
->Commandline options:
-* javac: ```javac --release 19 --enable-preview```
-* java: ```java --release 19 --enable-preview```
-
-VS Code Settings
-----------------
->Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
-```
-   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
-   "java.jdt.ls.vmargs": "--release 19 --enable-preview",
-   "java.configuration.runtimes": [
-      {
-         "name": "JavaSE-19",
-         "path": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
-         "default": true
-      },    
-   ],
-```
->These settings are supposed to ensure JDK 19 preview features are **enabled**!
->**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 19 --enable-preview"```
->fundamentally disables Java support in VS Code.
-
 Install
 -------
 >On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
@@ -106,6 +56,39 @@ Execute
 >Run executable jar:
 1. java -jar target/java-1.0-SNAPSHOT-jar-with-dependencies.jar
 
+Preview Features
+----------------
+>Status of build tools and IDEs vis-a-vis JDK 19 **preview features**:
+1. Maven **does** understand; unit tests **pass**.
+2. Gradle **does not** understand; and unit tests **fail**.
+3. Intellij **does** understand; yet unit tests **fail** since it defaults to Gradle.
+   1. **Solution:** Configure Intellij to run tests using Intellij and Maven.
+4. VS Code **does not** understand. See **VS Code Settings** section below!
+>See maven and gradle build files for details:
+1. pom.xml
+2. build.gradle.kts
+>Commandline options:
+* javac: ```javac --release 19 --enable-preview```
+* java: ```java --release 19 --enable-preview```
+
+VS Code Settings
+----------------
+>Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
+```
+   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
+   "java.jdt.ls.vmargs": "--release 19 --enable-preview",
+   "java.configuration.runtimes": [
+      {
+         "name": "JavaSE-19",
+         "path": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
+         "default": true
+      },    
+   ],
+```
+>These settings are supposed to ensure JDK 19 preview features are **enabled**!
+>**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 19 --enable-preview"```
+>fundamentally disables Java support in VS Code.
+
 Learn Java
 ----------
 >Random thoughts on how to learn Java - from a guy who used Java for 16 years.
@@ -116,7 +99,6 @@ Learn Java
    2. [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
 4. Start learning Java with [Get Started with Java Series](https://www.baeldung.com/get-started-with-java-series).
 5. Maintain all Java project work in one or more Github repositories as required.
-
 >***Always keep it simple!*** ***And never forget Murphy's law!***
 
 IDEs
@@ -130,9 +112,6 @@ UML
 ---
 >Search on UML tutorials.
 1. [Association, Aggregation, Composition](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)
-
-UML Editor
-----------
 >Search on UML editors.
 1. [Umlet](https://www.umlet.com/)
 
@@ -147,3 +126,20 @@ Resources
 7. [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
 8. [Coursera Java](https://www.coursera.org/search?query=java&)
 9. [Rock the JVM Java Video](https://www.youtube.com/watch?v=sjGjoDiD2F8)
+
+Java X Project
+--------------
+>See [Java X Project](https://github.com/objektwerks/java.x) for some dated yet useful work on:
+1. aop ( aspect-oriented-programming )
+2. hibernate ( object-relational mapping )
+3. models ( homeschool, beer )
+4. jaxb ( java <-> xml binding )
+5. jms ( messaging )
+6. jpa ( object-relational mapping )
+7. quartz ( scheduling )
+8. xml ( structured markup language )
+9. spring ( dependency injection framework and more )
+
+Swing Project
+-------------
+>Also see [Swing Project](https://github.com/objektwerks/swing) for Java2D and Swing work.
