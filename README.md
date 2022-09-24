@@ -44,13 +44,9 @@ Swing Project
 -------------
 >Also see [Swing Project](https://github.com/objektwerks/swing) for Java2D and Swing work.
 
-New Features ( JDK 8 to JDK 18 )
---------------------------------
-* [New Features](https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-18/)
-
 Preview Features
 ----------------
->Status of build tools and IDEs vis-a-vis JDK 17 **preview features**:
+>Status of build tools and IDEs vis-a-vis JDK 19 **preview features**:
 1. Maven **does** understand; unit tests **pass**.
 2. Gradle **does not** understand; and unit tests **fail**.
 3. Intellij **does** understand; yet unit tests **fail** since it defaults to Gradle. 
@@ -60,14 +56,14 @@ Preview Features
 1. pom.xml
 2. build.gradle.kts
 >Commandline options:
-* javac: ```javac --release 17 --enable-preview```
-* java: ```java --release 17 --enable-preview```
+* javac: ```javac --release 19 --enable-preview```
+* java: ```java --release 19 --enable-preview```
 
 VS Code Settings
 ----------------
 >Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
 ```
-   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home",
+   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
    "java.jdt.ls.vmargs": "--release 17 --enable-preview",
    "java.configuration.runtimes": [
       {
@@ -77,8 +73,8 @@ VS Code Settings
       },    
    ],
 ```
->These settings are supposed to ensure JDK 17 preview features are **enabled**!
->**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 17 --enable-preview"```
+>These settings are supposed to ensure JDK 19 preview features are **enabled**!
+>**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 19 --enable-preview"```
 >fundamentally disables Java support in VS Code.
 
 Install
@@ -89,19 +85,16 @@ Install
 
 Build
 -----
-1. gradle clean build
-2. mvn clean install
+1. gradle clean build | mvn clean install
 
 Test
 ----
-1. gradle clean test
-2. mvn clean test
-3. In Intellij, right-select java > src > test > java > objektwerks > Run Tests in objektwerks
+1. gradle clean test | mvn clean test 
+>In Intellij, right-select java > src > test > java > objektwerks > Run Tests in objektwerks
 
 Run
 ---
-1. gradle run
-2. mvn exec:java
+1. gradle run | mvn exec:java
 
 Package
 -------
@@ -119,7 +112,7 @@ Learn Java
 1. Create a **free** [Github Account](https://github.com).
 2. Learn [Git Basics](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/).
 3. Download and install:
-   1. [Java JDK 17](https://www.oracle.com/java/technologies/downloads/#java17).
+   1. [Java JDK 19](https://www.oracle.com/java/technologies/downloads/#java19).
    2. [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
 4. Start learning Java with [Get Started with Java Series](https://www.baeldung.com/get-started-with-java-series).
 5. Maintain all Java project work in one or more Github repositories as required.
