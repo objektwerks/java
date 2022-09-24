@@ -64,11 +64,11 @@ VS Code Settings
 >Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
 ```
    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
-   "java.jdt.ls.vmargs": "--release 17 --enable-preview",
+   "java.jdt.ls.vmargs": "--release 19 --enable-preview",
    "java.configuration.runtimes": [
       {
-         "name": "JavaSE-17",
-         "path": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home",
+         "name": "JavaSE-19",
+         "path": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
          "default": true
       },    
    ],
@@ -89,7 +89,7 @@ Build
 
 Test
 ----
-1. gradle clean test | mvn clean test 
+1. gradle clean test | mvn clean test
 >In Intellij, right-select java > src > test > java > objektwerks > Run Tests in objektwerks
 
 Run
