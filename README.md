@@ -31,7 +31,7 @@ Install
 -------
 >On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
 1. [Maven](https://maven.apache.org/)
-2. [Gradle](https://gradle.org/)
+2. [Gradle](https://gradle.org/)  ***Due to multiple issues Gradle had to be removed.***
 
 Build
 -----
