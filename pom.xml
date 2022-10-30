@@ -83,8 +83,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <forkMode>once</forkMode>
-                    <argLine>--release 19 --enable-preview --add-modules jdk.incubator.concurrent</argLine>
+                    <argLine>--enable-preview --add-modules jdk.incubator.concurrent</argLine>
                 </configuration>
             </plugin>
             <plugin>
