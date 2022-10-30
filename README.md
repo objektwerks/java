@@ -68,8 +68,8 @@ Preview Features
 1. pom.xml
 2. build.gradle.kts
 >Commandline options:
-* javac: ```javac --release 19 --enable-preview -add-modules jdk.incubator.concurrent```
-* java: ```java --release 19 --enable-preview -add-modules jdk.incubator.concurrent```
+* javac: ```javac --release 19 --enable-preview --add-modules jdk.incubator.concurrent```
+* java: ```java --release 19 --enable-preview --add-modules jdk.incubator.concurrent```
 
 VS Code Settings
 ----------------
