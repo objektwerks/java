@@ -3,16 +3,19 @@ package objektwerks;
 import java.util.concurrent.Callable;
 
 class Task implements Callable<Long> {
-    long fibonacci(long n, long a, long b) {
+    int n;
+
+    long fibonacci(int n, int a, int b) {
         if (n == 0) return a;
         else return fibonacci(n -1, b, a + b);
     }
 
-    public Task() {
+    public Task(int n) {
+        this.n = n;
     }
 
     @Override
     public Long call() {
-        return fibonacci(39, 0, 1);
+        return fibonacci(n, 0, 1);
     }
 }
