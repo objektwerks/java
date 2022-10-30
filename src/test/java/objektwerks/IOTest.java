@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.UUID;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -81,20 +82,25 @@ class IOTest {
     }
 
     @Test void linesTest() throws URISyntaxException, IOException {
-        var path = Paths.get(getClass().getClassLoader().getResource("logback-test.xml").toURI());
+        var path = Paths
+            .get(Objects
+            .requireNonNull(getClass()
+            .getClassLoader()
+            .getResource("logback-test.xml"))
+            .toURI());
         try(var stream = Files.lines(path)) {
             assert(!stream.toList().isEmpty());
         }
     }
 
     @Test void readAllLinesTest() throws IOException {
-        var path = Paths.get("build.gradle.kts");
+        var path = Paths.get("LICENSE");
         assert(!Files.readAllLines(path).isEmpty());
     }
 
     @Test void getResourceAsStreamTest() throws IOException {
         try(var stream = getClass().getClassLoader().getResourceAsStream("logback-test.xml")) {
-            assert(stream.readAllBytes().length > 0);
+            assert(Objects.requireNonNull(stream).readAllBytes().length > 0);
         }
     }
 }
