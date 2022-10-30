@@ -20,7 +20,7 @@ public class App {
         System.out.println(prefix + "Hello world!");
         System.out.println(prefix + "Hello, " + name + "!");
 
-        logger.info(prefix + "App lgging is working!");
+        logger.info(prefix + "App logging is working!");
 
         var client = HttpClient.newBuilder()
             .version(HttpClient.Version.HTTP_1_1)
