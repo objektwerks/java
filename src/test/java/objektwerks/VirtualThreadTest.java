@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class VirtualThreadTest {
     @Test void virtualThreadTest() throws ExecutionException, InterruptedException {
         var tasks = new ArrayList<Task>();
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 1000; i++) {
             tasks.add(new Task(i));
         }
 
@@ -21,6 +21,7 @@ class VirtualThreadTest {
                 sum += future.get();
             }
         }
-        System.out.println("sum: " + sum);
+        System.out.println("sum: " + Math.abs(sum));
+        assert(84580933396L == Math.abs(sum));
     }
 }
