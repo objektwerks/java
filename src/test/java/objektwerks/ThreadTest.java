@@ -24,7 +24,7 @@ class ThreadTest {
             executor.execute(
                     () -> {
                         counter.set(1);
-                        assert (counter.get() == 1);
+                        assert(counter.get() == 1);
                     }
             );
         }
@@ -32,16 +32,16 @@ class ThreadTest {
 
     @Test void executorServiceTest() throws ExecutionException, InterruptedException, TimeoutException {
         var counter = new AtomicInteger(0);
-        Future<Integer> future;
+        var result = 0;
         try (var executor = Executors.newFixedThreadPool(2)) {
-            future = executor.submit(
+            var future = executor.submit(
                     () -> {
                         counter.set(1);
                         return counter.get();
                     }
             );
+            result = future.get(100, TimeUnit.MILLISECONDS);
         }
-        var result = future.get(100, TimeUnit.MILLISECONDS);
         assertEquals(Integer.valueOf(1), result);
     }
 
@@ -59,7 +59,6 @@ class ThreadTest {
             );
             result = future.get(300, TimeUnit.MILLISECONDS);
         }
-
         assertEquals(Integer.valueOf(1), result);
     }
 
