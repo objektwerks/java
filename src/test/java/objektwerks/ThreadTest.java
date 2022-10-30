@@ -35,7 +35,7 @@ class ThreadTest {
         Future<Integer> future = executor.submit(
             () -> {
                 counter.set(1);
-                return Integer.valueOf(counter.get());
+                return counter.get();
             }
         );
         var result = future.get(100, TimeUnit.MILLISECONDS);
@@ -48,7 +48,7 @@ class ThreadTest {
         Future<Integer> future = executor.schedule(
             () -> {
                 counter.set(1);
-                return Integer.valueOf(counter.get());
+                return counter.get();
             },
             100,
             TimeUnit.MILLISECONDS
@@ -63,7 +63,7 @@ class ThreadTest {
         Future<Integer> future = executor.submit(
             () -> {
                 counter.set(1);
-                return Integer.valueOf(counter.get());
+                return counter.get();
             }
         );
         var result = future.get(100, TimeUnit.MILLISECONDS);
