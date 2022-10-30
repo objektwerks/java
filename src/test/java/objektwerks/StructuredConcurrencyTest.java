@@ -7,6 +7,10 @@ import jdk.incubator.concurrent.StructuredTaskScope;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Run > Edit Configurations > StructuredConcurrencyTest
+ * --enable-preview --add-modules jdk.incubator.concurrent
+ */
 class StructuredConcurrencyTest {
     Long handle() throws ExecutionException, InterruptedException {
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
@@ -23,6 +27,6 @@ class StructuredConcurrencyTest {
     @Test void structuredConcurrencyTest() throws ExecutionException, InterruptedException {
         var sum = handle();
         System.out.println("sum: " + Math.abs(sum));
-        // assert(84580933396L == Math.abs(sum));
+        assert(298632863 == Math.abs(sum));
     }
 }
