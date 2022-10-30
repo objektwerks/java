@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ThreadTest {
     @Test void threadTest() throws InterruptedException {
         var counter = new AtomicInteger(0);
-        Thread thread = new Thread(
+        var thread = new Thread(
             () -> {
                 counter.set(1);
                 assert(counter.get() == 1);
@@ -20,7 +20,7 @@ class ThreadTest {
 
     @Test void executorTest() {
         var counter = new AtomicInteger(0);
-        Executor executor = Executors.newSingleThreadExecutor();
+        var executor = Executors.newSingleThreadExecutor();
         executor.execute(
             () -> {
                 counter.set(1);
@@ -45,7 +45,7 @@ class ThreadTest {
     @Test void scheduledExecutorServiceTest() throws ExecutionException, InterruptedException, TimeoutException {
         var counter = new AtomicInteger(0);
         var executor = Executors.newScheduledThreadPool(2);
-        Future<Integer> future = executor.schedule(
+        var future = executor.schedule(
             () -> {
                 counter.set(1);
                 return counter.get();
@@ -60,7 +60,7 @@ class ThreadTest {
     @Test void threadPoolExecutorTest() throws ExecutionException, InterruptedException, TimeoutException {
         var counter = new AtomicInteger(0);
         var executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
-        Future<Integer> future = executor.submit(
+        var future = executor.submit(
             () -> {
                 counter.set(1);
                 return counter.get();
