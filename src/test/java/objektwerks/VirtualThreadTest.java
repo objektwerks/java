@@ -8,7 +8,7 @@ class VirtualThreadTest {
         else return fibonacci(n -1, b, a + b);
     }
 
-    @Test void threadTest() {
+    @Test void virtualThreadTest() {
         assert(fibonacci(39, 0, 1) == 63245986);
     }
 }
