@@ -21,10 +21,12 @@ Java
 * recursion
 * singleton
 * streams
+* structured concurrency
 * threads
 * text blocks
 * variables
 * varargs
+* virtual threads
 >And quite possibly a few more features.:)
 
 Install
