@@ -15,11 +15,11 @@ class StructuredConcurrencyTest {
     @Test void structuredConcurrencyTest() throws ExecutionException, InterruptedException {
         int lines;
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-            Future<Integer> factorial  = scope.fork(() -> new FileLineCountTask("./data/data.a.csv").call());
-            Future<Integer> fibonacci = scope.fork(() -> new FileLineCountTask("./data/data.b.csv").call());
+            Future<Integer> alines = scope.fork(() -> new FileLineCountTask("./data/data.a.csv").call());
+            Future<Integer> blines = scope.fork(() -> new FileLineCountTask("./data/data.b.csv").call());
             scope.join();
             scope.throwIfFailed();
-            lines = factorial.resultNow() + fibonacci.resultNow();
+            lines = alines.resultNow() + blines.resultNow();
         }
         assert(lines == 540_959);
     }
