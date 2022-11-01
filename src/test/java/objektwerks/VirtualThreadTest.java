@@ -22,6 +22,6 @@ class VirtualThreadTest {
                 lines += future.get();
             }
         }
-        assert(lines == 540959);
+        assert(lines == 540_959);
     }
 }

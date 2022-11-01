@@ -21,6 +21,6 @@ class StructuredConcurrencyTest {
             scope.throwIfFailed();
             lines = factorial.resultNow() + fibonacci.resultNow();
         }
-        assert(lines == 540959);
+        assert(lines == 540_959);
     }
 }
