@@ -24,6 +24,16 @@ class PatternMatchTest {
         };
     }
 
+    record Point(int x, int y) {}
+
+    String matchOn(Point point) {
+        return switch (point) {
+            case Point p when p.x < 2 && p.y < 2 -> "less than 2";
+            case Point p when p.x < 3 && p.y < 3 -> "less than 3";
+            case Point p when p.x < 4 && p.y < 4 -> "less than 4";
+            default -> "greater than 4";
+        };
+    }
 
     @Test void matchTest() {
         assertEquals(matchOn(1), "1");
@@ -36,5 +46,11 @@ class PatternMatchTest {
         assertEquals(matchOn("aa"), "length of 2");
         assertEquals(matchOn("aaa"), "length of 3");
         assertEquals(matchOn("aaaa"), "length greater than 3");
+    }
+
+    @Test void recordMatchTest() {
+        assertEquals(matchOn(new Point(1, 1)), "less than 2");
+        assertEquals(matchOn(new Point(2, 2)), "less than 3");
+        assertEquals(matchOn(new Point(3, 3)), "less than 4");
     }
 }
