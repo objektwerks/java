@@ -83,11 +83,13 @@ class IOTest {
 
     @Test void linesTest() throws URISyntaxException, IOException {
         var path = Paths
-            .get(Objects
-            .requireNonNull(getClass()
-            .getClassLoader()
-            .getResource("logback-test.xml"))
-            .toURI());
+            .get(
+                Objects
+                    .requireNonNull(getClass()
+                    .getClassLoader()
+                    .getResource("logback-test.xml"))
+                    .toURI()
+            );
         try(var stream = Files.lines(path)) {
             assert(!stream.toList().isEmpty());
         }
