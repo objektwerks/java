@@ -11,17 +11,15 @@ import org.junit.jupiter.api.Test;
  * --enable-preview --add-modules jdk.incubator.concurrent
  */
 class StructuredConcurrencyTest {
-    Integer handle() throws ExecutionException, InterruptedException {
+    @Test void structuredConcurrencyTest() throws ExecutionException, InterruptedException {
+        int sum = 0;
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
             Future<Integer> factorial  = scope.fork(() -> new FileLineCountTask("./data/data.a.csv").call());
             Future<Integer> fibonacci = scope.fork(() -> new FileLineCountTask("./data/data.b.csv").call());
             scope.join();
             scope.throwIfFailed();
-            return factorial.get() + fibonacci.get();
+            sum = factorial.get() + fibonacci.get();
         }
-    }
-
-    @Test void structuredConcurrencyTest() throws ExecutionException, InterruptedException {
-        assert(540959 == handle());
+        assert(sum == 540959);
     }
 }
