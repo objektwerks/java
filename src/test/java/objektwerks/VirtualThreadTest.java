@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  */
 class VirtualThreadTest {
     @Test void virtualThreadTest() throws ExecutionException, InterruptedException {
-        var tasks = new ArrayList<FileLineCountTask>();
+        var tasks = new ArrayList<FileLineCountTask>(2);
         tasks.add( new FileLineCountTask("./data/data.a.csv") );
         tasks.add( new FileLineCountTask("./data/data.b.csv") );
 
