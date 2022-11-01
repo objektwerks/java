@@ -13,14 +13,14 @@ import org.junit.jupiter.api.Test;
  */
 class StructuredConcurrencyTest {
     @Test void structuredConcurrencyTest() throws ExecutionException, InterruptedException {
-        int sum;
+        int lines;
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
             Future<Integer> factorial  = scope.fork(() -> new FileLineCountTask("./data/data.a.csv").call());
             Future<Integer> fibonacci = scope.fork(() -> new FileLineCountTask("./data/data.b.csv").call());
             scope.join();
             scope.throwIfFailed();
-            sum = factorial.get() + fibonacci.get();
+            lines = factorial.get() + fibonacci.get();
         }
-        assert(sum == 540959);
+        assert(lines == 540959);
     }
 }
