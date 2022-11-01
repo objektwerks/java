@@ -15,7 +15,6 @@ class FileLineCountTask implements Callable<Integer> {
         } catch(IOException ioe) {
             return -1;
         }
-
     }
 
     public FileLineCountTask(String file) {
