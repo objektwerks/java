@@ -14,8 +14,27 @@ class PatternMatchTest {
         };
     }
 
+    String matchOn(String string) {
+        return switch (string) {
+            case String s when s.length() < 1 -> "empty";
+            case String s when s.length() < 2 -> "length of 1";
+            case String s when s.length() < 3 -> "length of 2";
+            case String s when s.length() < 4 -> "length of 3";
+            default -> "length greater than 3";
+        };
+    }
+
+
     @Test void matchTest() {
         assertEquals(matchOn(1), "1");
         assertEquals(matchOn(2.0), "2.0");
+    }
+
+    @Test void matchWhenTest() {
+        assertEquals(matchOn(""), "empty");
+        assertEquals(matchOn("a"), "length of 1");
+        assertEquals(matchOn("aa"), "length of 2");
+        assertEquals(matchOn("aaa"), "length of 3");
+        assertEquals(matchOn("aaaa"), "length greater than 3");
     }
 }
