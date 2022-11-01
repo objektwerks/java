@@ -19,6 +19,6 @@ class VirtualThreadTest {
                 sum += future.get();
             }
         }
-        assert(540959 == sum);
+        assert(sum == 540959);
     }
 }
