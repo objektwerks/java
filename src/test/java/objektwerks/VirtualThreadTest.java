@@ -20,7 +20,6 @@ class VirtualThreadTest {
                 sum += future.get();
             }
         }
-        System.out.println("sum: " + Math.abs(sum));
         assert(540959 == sum);
     }
 }
