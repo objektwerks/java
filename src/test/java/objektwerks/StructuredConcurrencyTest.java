@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  * Run > Edit Configurations > StructuredConcurrencyTest
  * --enable-preview --add-modules jdk.incubator.concurrent
  *
- * <a href="https://openjdk.org/jeps/428">Structured Concurrency</a>
+ * Structured Concurrency: https://openjdk.org/jeps/428
  */
 class StructuredConcurrencyTest {
     @Test void structuredConcurrencyTest() throws ExecutionException, InterruptedException {
