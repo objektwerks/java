@@ -15,13 +15,13 @@ class VirtualThreadTest {
         tasks.add( new FileLineCountTask("./data/data.a.csv") );
         tasks.add( new FileLineCountTask("./data/data.b.csv") );
 
-        int sum = 0;
+        int lines = 0;
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             var futures = executor.invokeAll(tasks);
             for (var future : futures) {
-                sum += future.get();
+                lines += future.get();
             }
         }
-        assert(sum == 540959);
+        assert(lines == 540959);
     }
 }
