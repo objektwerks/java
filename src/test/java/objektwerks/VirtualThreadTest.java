@@ -9,19 +9,18 @@ import org.junit.jupiter.api.Test;
 
 class VirtualThreadTest {
     @Test void virtualThreadTest() throws ExecutionException, InterruptedException {
-        var tasks = new ArrayList<FibonacciTask>();
-        for (int i = 0; i < 1000; i++) {
-            tasks.add(new FibonacciTask(i));
-        }
+        var tasks = new ArrayList<FileLineCountTask>();
+        tasks.add( new FileLineCountTask("./data/data.a.csv") );
+        tasks.add( new FileLineCountTask("./data/data.b.csv") );
 
-        long sum = 0;
+        int sum = 0;
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             var futures = executor.invokeAll(tasks);
-            for (Future<Long> future : futures) {
+            for (Future<Integer> future : futures) {
                 sum += future.get();
             }
         }
         System.out.println("sum: " + Math.abs(sum));
-        assert(84580933396L == Math.abs(sum));
+        assert(540959 == sum);
     }
 }
