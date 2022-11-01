@@ -3,7 +3,6 @@ package objektwerks;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +15,7 @@ class VirtualThreadTest {
         int sum = 0;
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             var futures = executor.invokeAll(tasks);
-            for (Future<Integer> future : futures) {
+            for (var future : futures) {
                 sum += future.get();
             }
         }
