@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 import org.junit.jupiter.api.Test;
 
 /**
- * Virtual Threads: https://openjdk.org/jeps/425
+ * Virtual Threads: openjdk.org/jeps/425
  */
 class VirtualThreadTest {
     @Test void virtualThreadTest() throws ExecutionException, InterruptedException {
