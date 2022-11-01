@@ -3,11 +3,8 @@ package objektwerks;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-/**
- * This test passes with Maven but fails with Gradle. Fix unknown at this time.
- */
 class PatternMatchTest {
-    String mathOn(Number number) {
+    String matchOn(Number number) {
         return switch (number) {
             case Integer i -> i.toString();
             case Long    l -> l.toString();
@@ -18,7 +15,7 @@ class PatternMatchTest {
     }
 
     @Test void matchTest() {
-        assertEquals(mathOn(1), "1");
-        assertEquals(mathOn(2.0), "2.0");
+        assertEquals(matchOn(1), "1");
+        assertEquals(matchOn(2.0), "2.0");
     }
 }
