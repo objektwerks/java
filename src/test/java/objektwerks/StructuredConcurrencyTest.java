@@ -19,7 +19,7 @@ class StructuredConcurrencyTest {
             Future<Integer> fibonacci = scope.fork(() -> new FileLineCountTask("./data/data.b.csv").call());
             scope.join();
             scope.throwIfFailed();
-            lines = factorial.get() + fibonacci.get();
+            lines = factorial.resultNow() + fibonacci.resultNow();
         }
         assert(lines == 540959);
     }
