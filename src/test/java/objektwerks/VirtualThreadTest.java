@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Virtual Threads: openjdk.org/jeps/425
+ * Article: www.marcobehler.com/guides/java-project-loom
  */
 class VirtualThreadTest {
     @Test void virtualThreadTest() throws ExecutionException, InterruptedException {
