@@ -8,8 +8,7 @@ import java.util.UUID;
 /**
  * Run > Edit Configurations > ScopedValueTest
  * --enable-preview --add-modules jdk.incubator.concurrent
- * Structured Concurrency: openjdk.org/jeps/428
- * ScopedValue: openjdk.org/jeps/429 ( TODO )
+ * ScopedValue: openjdk.org/jeps/429
  */
 class ScopedValueTest {
     private static final String uuid = UUID.randomUUID().toString();
