@@ -1,9 +1,9 @@
 package objektwerks;
 
-import jdk.incubator.concurrent.ScopedValue;
-import org.junit.jupiter.api.Test;
-
 import java.util.UUID;
+import jdk.incubator.concurrent.ScopedValue;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Run > Edit Configurations > ScopedValueTest
