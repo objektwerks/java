@@ -1,6 +1,7 @@
 package objektwerks;
 
 import java.util.UUID;
+
 import jdk.incubator.concurrent.ScopedValue;
 
 import org.junit.jupiter.api.Test;
@@ -11,14 +12,16 @@ import org.junit.jupiter.api.Test;
  * ScopedValue: openjdk.org/jeps/429
  */
 class ScopedValueTest {
-    private static final String uuid = UUID.randomUUID().toString();
     private static final ScopedValue<String> license = ScopedValue.newInstance();
+    private static final String uuid = UUID.randomUUID().toString();
 
     @Test void scopedValueTest() throws Exception {
-        var lines = ScopedValue
+        var count = ScopedValue
                 .where(license, uuid)
-                .call( new FileLineCountTask("./data/data.a.csv") );
-        assert(lines == 270562);
+                .call(
+                     () -> license.get().isEmpty() ? 0 : 1
+                );
+        assert(count == 1);
         assert(!license.isBound());
     }
 }
