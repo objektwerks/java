@@ -15,7 +15,7 @@ class ScopedValueTest {
     private static final ScopedValue<String> license = ScopedValue.newInstance();
 
     @Test void scopedValueTest() throws Exception {
-        Integer lines = ScopedValue
+        var lines = ScopedValue
                 .where(license, uuid)
                 .call( new FileLineCountTask("./data/data.a.csv") );
         assert(lines == 270562);
