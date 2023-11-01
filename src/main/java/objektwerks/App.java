@@ -29,7 +29,7 @@ public class App {
         var request = HttpRequest
             .newBuilder()
             .GET()
-            .uri(URI.create("http://api.icndb.com/jokes/random/"))
+            .uri(URI.create("https://api.chucknorris.io/jokes/random"))
             .build();
 
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
