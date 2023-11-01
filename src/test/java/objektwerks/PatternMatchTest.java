@@ -35,12 +35,19 @@ class PatternMatchTest {
         };
     }
 
-    @Test void matchTest() {
+    String matchOn(Shape shape) {
+        return switch (shape) {
+            case Circle(var diameter) -> "circle(" + diameter + ")";
+            case Square(var side) -> "square(" + side + ")";
+        };
+    }
+
+    @Test void numberMatchTest() {
         assertEquals(matchOn(1), "1");
         assertEquals(matchOn(2.0), "2.0");
     }
 
-    @Test void matchWhenTest() {
+    @Test void stringMatchWhenTest() {
         assertEquals(matchOn(""), "empty");
         assertEquals(matchOn("a"), "length of 1");
         assertEquals(matchOn("aa"), "length of 2");
@@ -48,9 +55,14 @@ class PatternMatchTest {
         assertEquals(matchOn("aaaa"), "length greater than 3");
     }
 
-    @Test void recordMatchTest() {
+    @Test void pointRecordMatchTest() {
         assertEquals(matchOn(new Point(1, 1)), "less than 2");
         assertEquals(matchOn(new Point(2, 2)), "less than 3");
         assertEquals(matchOn(new Point(3, 3)), "less than 4");
+    }
+
+    @Test void shapeRecordMatchTest() {
+        assertEquals(matchOn(new Circle(6)), "circle(6.0)");
+        assertEquals(matchOn(new Square(6)), "square(6.0)");
     }
 }
