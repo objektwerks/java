@@ -38,6 +38,7 @@ Install
 Build
 -----
 1. gradle clean build | mvn clean install
+>Add Gradle to this project to run Gradle!
 
 Test
 ----
