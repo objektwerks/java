@@ -16,7 +16,7 @@ class PatternMatchTest {
 
     String matchOn(String string) {
         return switch (string) {
-            case String s when s.length() < 1 -> "empty";
+            case String s when s.isEmpty() -> "empty";
             case String s when s.length() < 2 -> "length of 1";
             case String s when s.length() < 3 -> "length of 2";
             case String s when s.length() < 4 -> "length of 3";
