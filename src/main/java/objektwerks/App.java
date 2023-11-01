@@ -20,12 +20,14 @@ class App {
 
         logger.info(prefix + "App logging is working!");
 
-        var client = HttpClient.newBuilder()
+        var client = HttpClient
+            .newBuilder()
             .version(HttpClient.Version.HTTP_1_1)
             .connectTimeout(Duration.ofSeconds(10))
             .build();
 
-        var request = HttpRequest.newBuilder()
+        var request = HttpRequest
+            .newBuilder()
             .GET()
             .uri(URI.create("http://api.icndb.com/jokes/random/"))
             .build();
