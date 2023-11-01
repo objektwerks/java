@@ -15,9 +15,6 @@ sealed interface Shape permits Circle, Square {
 record Circle(double diameter) implements Shape {}
 record Square(double side) implements Shape {}
 
-/**
- * This test passes with Maven but fails with Gradle. Fix unknown at this time.
- */
 class RecordTest {
     @Test void recordTest() {
         var circle = new Circle(6.0);
