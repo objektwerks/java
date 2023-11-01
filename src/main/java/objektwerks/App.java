@@ -9,7 +9,7 @@ import java.time.Duration;
 
 import org.slf4j.LoggerFactory;
 
-class App {
+public class App {
     public static void main(String[] args) throws IOException, InterruptedException {
         var logger = LoggerFactory.getLogger(App.class);
         var name = args.length > 0 ? args[0] : "Java geek";
