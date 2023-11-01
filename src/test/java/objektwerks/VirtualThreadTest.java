@@ -6,12 +6,6 @@ import java.util.concurrent.Executors;
 
 import org.junit.jupiter.api.Test;
 
-/**
- * Run > Edit Configurations > VirtualThreadTest
- * --enable-preview --add-modules jdk.incubator.concurrent
- * Virtual Threads: openjdk.org/jeps/425
- * Article: www.marcobehler.com/guides/java-project-loom
- */
 class VirtualThreadTest {
     @Test void virtualThreadTest() throws ExecutionException, InterruptedException {
         var tasks = new ArrayList<FileLineCountTask>(2);
