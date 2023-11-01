@@ -7,15 +7,13 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 class App {
-    private static final Logger logger = LoggerFactory.getLogger(App.class);
-
     public static void main(String[] args) throws IOException, InterruptedException {
-        String name = args.length > 0 ? args[0] : "Java geek";
-        String prefix = "*** ";
+        var logger = LoggerFactory.getLogger(App.class);
+        var name = args.length > 0 ? args[0] : "Java geek";
+        var prefix = "*** ";
 
         System.out.println(prefix + "Hello world!");
         System.out.println(prefix + "Hello, " + name + "!");
