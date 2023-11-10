@@ -129,6 +129,7 @@ Resources
 7. [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
 8. [Coursera Java](https://www.coursera.org/search?query=java&)
 9. [Rock the JVM Java Video](https://www.youtube.com/watch?v=sjGjoDiD2F8)
+10. [Java 21: Switch the Power On](https://softwaremill.com/java-21-switch-the-power-on/)
 
 Java X Project
 --------------
