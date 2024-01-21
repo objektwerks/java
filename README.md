@@ -96,20 +96,3 @@ Resources
 8. [Coursera Java](https://www.coursera.org/search?query=java&)
 9. [Rock the JVM Java Video](https://www.youtube.com/watch?v=sjGjoDiD2F8)
 10. [Java 21: Switch the Power On](https://softwaremill.com/java-21-switch-the-power-on/)
-
-Java X Project
---------------
->See [Java X Project](https://github.com/objektwerks/java.x) for some dated yet useful work on:
-1. aop ( aspect-oriented-programming )
-2. hibernate ( object-relational mapping )
-3. models ( homeschool, beer )
-4. jaxb ( java <-> xml binding )
-5. jms ( messaging )
-6. jpa ( object-relational mapping )
-7. quartz ( scheduling )
-8. xml ( structured markup language )
-9. spring ( dependency injection framework and more )
-
-Swing Project
--------------
->Also see [Swing Project](https://github.com/objektwerks/swing) for Java2D and Swing work.
