@@ -31,11 +31,9 @@ Java
 
 Install
 -------
->Consider using [Homebrew](https://brew.sh/) or [Sdkman](https://sdkman.io/) to install Maven and Gradle.
+>Consider using [Homebrew](https://brew.sh/) or [Sdkman](https://sdkman.io/) to install Maven and/or Gradle.
 1. [Maven](https://maven.apache.org/)
 2. [Gradle](https://gradle.org/)
-
->Add Gradle to this project to run Gradle commands detailed below!
 
 Build
 -----
@@ -63,7 +61,7 @@ Run
 
 Package
 -------
->Package and assemble, via maven-assembly-plugin, an executable jar:
+>Maven:
 1. mvn package
 
 Execute
