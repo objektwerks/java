@@ -77,25 +77,25 @@ Preview Features
 1. pom.xml
 2. build.gradle.kts
 >Commandline options:
-* javac: ```javac --release 19 --enable-preview --add-modules jdk.incubator.concurrent```
-* java: ```java --release 19 --enable-preview --add-modules jdk.incubator.concurrent```
+* javac: ```javac --release 21 --enable-preview --add-modules jdk.incubator.concurrent```
+* java: ```java --release 21 --enable-preview --add-modules jdk.incubator.concurrent```
 
 VS Code Settings
 ----------------
 >Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
 ```
-   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
-   "java.jdt.ls.vmargs": "--release 19 --enable-preview -add-modules jdk.incubator.concurrent",
+   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home",
+   "java.jdt.ls.vmargs": "--release 21 --enable-preview -add-modules jdk.incubator.concurrent",
    "java.configuration.runtimes": [
       {
-         "name": "JavaSE-19",
-         "path": "/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home",
+         "name": "JavaSE-21",
+         "path": "/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home",
          "default": true
       },    
    ],
 ```
->These settings are supposed to ensure JDK 19 preview features are **enabled**!
->**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 19 --enable-preview -add-modules jdk.incubator.concurrent"```
+>These settings are supposed to ensure JDK 21 preview features are **enabled**!
+>**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 21 --enable-preview -add-modules jdk.incubator.concurrent"```
 >fundamentally disables Java support in VS Code.
 
 Learn Java
