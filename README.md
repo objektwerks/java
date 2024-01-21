@@ -1,6 +1,6 @@
 Java
 ----
->Java feature tests to include:
+>Java feature tests cover:
 * classes
 * collections
 * control flow
@@ -27,7 +27,7 @@ Java
 * variables
 * varargs
 * virtual threads
->And quite possibly a few more features.:)
+>And quite possibly a few more features. :)
 
 Install
 -------
