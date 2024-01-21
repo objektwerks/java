@@ -35,10 +35,11 @@ Install
 1. [Maven](https://maven.apache.org/)
 2. [Gradle](https://gradle.org/)  ***Due to multiple issues Gradle had to be removed.***
 
+>Add Gradle to this project to run Gradle commands detailed below!
+
 Build
 -----
 1. gradle clean build | mvn clean install
->Add Gradle to this project to run Gradle!
 
 Test
 ----
