@@ -80,6 +80,7 @@ Resources
 * [Manning Books](https://www.manning.com/)
 * [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
 * [Coursera Java](https://www.coursera.org/search?query=java&)
+* [Intellij IDEA](https://www.jetbrains.com/idea/)
 * [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
 * [Visual Studio Code]( https://code.visualstudio.com/download )
 * [Netbeans](https://netbeans.apache.org/)
