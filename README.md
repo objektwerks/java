@@ -33,7 +33,7 @@ Install
 -------
 >Consider using [Homebrew](https://brew.sh/) or [Sdkman](https://sdkman.io/) to install Maven and Gradle.
 1. [Maven](https://maven.apache.org/)
-2. [Gradle](https://gradle.org/)  ***Due to multiple issues Gradle had to be removed from this project.***
+2. [Gradle](https://gradle.org/)
 
 >Add Gradle to this project to run Gradle commands detailed below!
 
