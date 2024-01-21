@@ -39,16 +39,21 @@ Install
 
 Build
 -----
-1. gradle clean build | mvn clean install
+1. gradle clean build
+
+1. mvn clean install
 
 Test
 ----
-1. gradle clean test | mvn clean test
->In Intellij, right-select java > src > test > java > objektwerks > Run Tests in objektwerks
+1. gradle clean test
+
+1. mvn clean test
 
 Run
 ---
-1. gradle run | mvn exec:java
+1. gradle run
+
+1. mvn exec:java
 
 Package
 -------
