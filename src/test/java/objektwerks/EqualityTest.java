@@ -47,7 +47,7 @@ class Person implements Comparable<Person> {
 
 class EqualityTest {
     @Test void primitiveTest() {
-        assert(1 == 1);
+        assert(1 != 2);
     }
 
     @Test void wrapperTest() {
