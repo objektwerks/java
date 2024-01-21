@@ -65,39 +65,6 @@ Execute
 >Run executable jar:
 1. java -jar target/java-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-Preview Features
-----------------
->Status of build tools and IDEs vis-a-vis JDK 19 **preview features**:
-1. Maven **does** understand; unit tests **pass**.
-2. Gradle **does not** understand; and unit tests **fail**.
-3. Intellij **does** understand; yet unit tests **fail** since it defaults to Gradle.
-   1. **Solution:** Configure Intellij to run tests using Intellij and Maven.
-4. VS Code **does not** understand. See **VS Code Settings** section below!
->See maven and gradle build files for details:
-1. pom.xml
-2. build.gradle.kts
->Commandline options:
-* javac: ```javac --release 21 --enable-preview --add-modules jdk.incubator.concurrent```
-* java: ```java --release 21 --enable-preview --add-modules jdk.incubator.concurrent```
-
-VS Code Settings
-----------------
->Via File > Preferences > Settings: **enter** java.jdt.ls.java.home > **select** Edit in settings.json
-```
-   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home",
-   "java.jdt.ls.vmargs": "--release 21 --enable-preview -add-modules jdk.incubator.concurrent",
-   "java.configuration.runtimes": [
-      {
-         "name": "JavaSE-21",
-         "path": "/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home",
-         "default": true
-      },    
-   ],
-```
->These settings are supposed to ensure JDK 21 preview features are **enabled**!
->**WARNING** Sadly this setting ```"java.jdt.ls.vmargs": "--release 21 --enable-preview -add-modules jdk.incubator.concurrent"```
->fundamentally disables Java support in VS Code.
-
 Learn Java
 ----------
 >Random thoughts on how to learn Java - from a guy who used Java for 16 years.
@@ -116,13 +83,6 @@ IDEs
 1. [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
 2. [Visual Studio (VS) Code]( https://code.visualstudio.com/download ).
 3. [Netbeans](https://netbeans.apache.org/)
-
-UML
----
->Search on UML tutorials.
-1. [Association, Aggregation, Composition](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)
->Search on UML editors.
-1. [Umlet](https://www.umlet.com/)
 
 Resources
 ---------
