@@ -79,7 +79,7 @@ Learn Java
 
 IDEs
 ----
->The following IDEs are also used in the Java community:
+>The following Java IDEs are available:
 1. [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
 2. [Visual Studio (VS) Code]( https://code.visualstudio.com/download ).
 3. [Netbeans](https://netbeans.apache.org/)
