@@ -61,6 +61,9 @@ Run
 
 Package
 -------
+>Gradle:
+1. gradle jar
+
 >Maven:
 1. mvn package
 
