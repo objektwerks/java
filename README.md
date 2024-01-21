@@ -81,6 +81,6 @@ Resources
 * [Udemy Java](https://www.udemy.com/courses/search/?src=ukw&q=java)
 * [Coursera Java](https://www.coursera.org/search?query=java&)
 * [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
-* [Visual Studio (VS) Code]( https://code.visualstudio.com/download ).
+* [Visual Studio Code]( https://code.visualstudio.com/download ).
 * [Netbeans](https://netbeans.apache.org/)
 * [Baeldung](https://www.baeldung.com/)
