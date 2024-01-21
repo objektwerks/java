@@ -34,7 +34,7 @@ Install
 >Consider using [Homebrew](https://brew.sh/) or [Sdkman](https://sdkman.io/) to install Maven and/or Gradle.
 1. [Maven](https://maven.apache.org/)
 2. [Gradle](https://gradle.org/)
->This project defaults to Maven.
+>This project defaults to the more stable Maven build tool.
 
 Build
 -----
