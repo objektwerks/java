@@ -39,20 +39,26 @@ Install
 
 Build
 -----
+>Gradle:
 1. gradle clean build
 
+>Maven:
 1. mvn clean install
 
 Test
 ----
+>Gradle:
 1. gradle clean test
 
+>Maven:
 1. mvn clean test
 
 Run
 ---
+>Gradle:
 1. gradle run
 
+>Maven:
 1. mvn exec:java
 
 Package
