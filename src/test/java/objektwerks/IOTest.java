@@ -102,7 +102,7 @@ class IOTest {
 
     @Test void getResourceAsStreamTest() throws IOException {
         try(var stream = getClass().getClassLoader().getResourceAsStream("logback-test.xml")) {
-            assert(Objects.requireNonNull(stream).readAllBytes().length > 0);
+            assert(stream.readAllBytes().length > 0);
         }
     }
 }
