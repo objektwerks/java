@@ -31,9 +31,9 @@ Java
 
 Install
 -------
->On a Unix system, consider using [Sdkman](https://sdkman.io/) to install Maven and Gradle.
+>Consider using [Homebrew](https://brew.sh/) or [Sdkman](https://sdkman.io/) to install Maven and Gradle.
 1. [Maven](https://maven.apache.org/)
-2. [Gradle](https://gradle.org/)  ***Due to multiple issues Gradle had to be removed.***
+2. [Gradle](https://gradle.org/)  ***Due to multiple issues Gradle had to be removed from this project.***
 
 >Add Gradle to this project to run Gradle commands detailed below!
 
