@@ -65,9 +65,9 @@ Execute
 >Run executable jar:
 1. java -jar target/java-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-Learn Java
-----------
->Random thoughts on how to learn Java - from a guy who used Java for 16 years.
+Learning
+--------
+>Random thoughts on how to learn Java:
 1. Create a **free** [Github Account](https://github.com).
 2. Learn [Git Basics](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/).
 3. Download and install:
