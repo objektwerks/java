@@ -2,9 +2,6 @@ package objektwerks;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
-import java.util.UUID;
-
 class VariableTest {
   @Test void booleanTest() {
       var isRound = true;
