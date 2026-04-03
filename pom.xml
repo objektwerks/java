@@ -67,15 +67,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.14.0</version>
+                <version>3.14.1</version>
                 <configuration>
-                    <release>25</release>
+                    <release>26</release>
                     <enablePreview>true</enablePreview>
                     <compilerArgs>
                         <arg>--enable-preview</arg>
                     </compilerArgs>
-                    <source>25</source>
-                    <target>25</target>
+                    <source>26</source>
+                    <target>26</target>
                 </configuration>
             </plugin>
             <plugin>
